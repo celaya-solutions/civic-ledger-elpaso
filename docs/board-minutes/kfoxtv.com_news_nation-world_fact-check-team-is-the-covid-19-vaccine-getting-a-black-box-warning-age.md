@@ -1,0 +1,12 @@
+# https_kfoxtv.com_news_nation-world_fact-check-team-is-the-covid-19-vaccine-getting-a-black-box-warning-ageency-fda-scientific
+
+**Source:** dc_corpus/raw/html/https_kfoxtv.com_news_nation-world_fact-check-team-is-the-covid-19-vaccine-getting-a-black-box-warning-ageency-fda-scientific.html
+
+---
+
+Fact Check Team: Is the COVID-19 vaccine getting a black box warning?
+WASHINGTON (TNND) — Reports have emerged suggesting that the Food and Drug Administration might consider adding a black box warning to COVID-19 vaccines, a move that would signify the highest level of caution for medical products. However, FDA Commissioner Marty Makary has denied these claims, stating in an interview with Bloomberg that there are no plans to issue such a warning.
+The speculation originated from an internal source, as reported by CNN, which cited individuals familiar with FDA discussions. The agency is reportedly exploring the possibility of a black box warning, typically reserved for risks such as death or serious, life-threatening injury. Despite these reports, the FDA has not made any formal announcements.
+The FDA has launched an investigation into a potential link between COVID-19 vaccinations and deaths, which has fueled the ongoing discussion, as reported by The New York Times. Andrew Nixon, a spokesperson for the Department of Health and Human Services, emphasized to CNN that any claims about a warning are "speculation" until the FDA makes an official statement.
+CNN reports that Dr. Vinay Prasad, the FDA's chief medical and scientific officer, is leading the internal push for the warning. Prasad allegedly circulated a memo claiming that FDA staff identified at least 10 pediatric deaths linked to COVID-19 vaccination, although no data has been publicly released to support this claim.
+The process of issuing a black box warning involves a thorough review of substantial clinical data showing severe harm, hospitalization, or death, according to The National Library of Medicine. This process often includes public announcements, data releases, and sometimes the convening of an independent advisory committee to debate the evidence. Dr. Aaron Kesselheim from Harvard told CNN that this ensures decisions are based on data rather than politics, allowing doctors and patients to understand the risks involved.

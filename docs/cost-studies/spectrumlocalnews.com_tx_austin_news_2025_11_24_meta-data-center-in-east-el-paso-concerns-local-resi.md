@@ -1,0 +1,21 @@
+# https_spectrumlocalnews.com_tx_austin_news_2025_11_24_meta-data-center-in-east-el-paso-concerns-local-residents
+
+**Source:** dc_corpus/raw/html/https_spectrumlocalnews.com_tx_austin_news_2025_11_24_meta-data-center-in-east-el-paso-concerns-local-residents.html
+
+---
+
+EL PASO, Texas — A new AI-optimized Meta data center is taking shape in far East El Paso. While supporters tout billions in investment and hundreds of new jobs, residents nearby are voicing serious concerns about water usage, electricity and the effects on their neighborhoods.
+The data center is currently under construction in the northeast part of the city of El Paso. Meta says it selected El Paso for its workforce, available open land and access to renewable energy. As the project advances, many in this community are now asking questions about how they’ll be affected by one of the region’s largest tech investments.
+In the desert area on the outskirts of the city, the massive 1.2 million-square-foot facility is now under construction. It’s the tech giant’s future data center, a project Jon Barela of the Borderplex Alliance —an organization focused on economic development in El Paso, Las Cruces, New Mexico and Ciudad Juárez, Mexico—says has been in the works for four years.
+“It is one of the best world companies, so to have them here it’s an absolute honor here in El Paso County, and we are thrilled to have them and welcome them here.” Barela said.
+He describes Meta’s arrival as a turning point for the region and the result of years of work to position El Paso as a hub for advanced data and AI infrastructure.
+“I have been working with other valued community partners, elected officials, the city and county levels, and of course, our utilities El Paso Water, and El Paso Electric, which are very much part of this team to locate this project, which would be at least $1.5 billion initial investment with hopefully many more billions to come,” he said.
+Barela says he has witnessed the impact firsthand. In 2016, he helped recruit Meta to build its first New Mexico data center in Los Lunas.
+“Their construction is complete, and thousands of jobs have been created in that area. The population has grown at a good rate there in central New Mexico, and there have been many positive things that have happened,” he said.
+But it’s Barela’s work with El Paso Water and El Paso Electric that many in this community are most interested in. The new facility will require large amounts of electricity to cool its servers.
+El Paso is not on the Texas grid managed by the Electric Reliability Council of Texas (ERCOT). But while Meta says the site will operate on 100% renewable energy, neighbors worry it could still strain the local power grid.
+Water usage has sparked even greater controversy. Meta’s design relies on evaporative cooling. Initial estimates suggest the facility could consume up to 1.5 billion gallons of water each year, an amount that residents fear may affect water availability and raise rates.
+“It’s good that they are bringing another company, and it’s good that they are bringing job opportunities, but to take 1.5 billion gallons of water for the community, I think they need to research that more and possibly find a better way to do it instead of taking out the water from homeowners,” said Richard Herrera, a neighbor to the data center.
+El Paso Water insists the region can manage the increased demand, stating the final system design will require much less water than initially estimated and that Meta will cover the full cost of any necessary infrastructure upgrades. However, for families already coping with rising utility bills, the ongoing uncertainty is troubling.
+“It’s very bad, and also when there is too much water using the bills are going up again, every year they go up, and that’s not good for the people who work for our families, and having bills too high is not good,” said Martin Ramos, another neighbor of the data center.
+Meta says the project will create 1,200 construction jobs at its peak and approximately 100 long-term positions, while generating millions in local tax revenue. Construction is expected to continue through 2028.

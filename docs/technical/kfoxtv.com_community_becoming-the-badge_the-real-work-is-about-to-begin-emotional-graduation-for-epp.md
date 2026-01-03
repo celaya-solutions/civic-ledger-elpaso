@@ -1,0 +1,31 @@
+# https_kfoxtv.com_community_becoming-the-badge_the-real-work-is-about-to-begin-emotional-graduation-for-eppds-newest-police-officers
+
+**Source:** dc_corpus/raw/html/https_kfoxtv.com_community_becoming-the-badge_the-real-work-is-about-to-begin-emotional-graduation-for-eppds-newest-police-officers.html
+
+---
+
+'The real work is about to begin': Emotional graduation for EPPD's newest police officers
+EL PASO, Texas (KFOX14/CBS4) — The 16 recruits left standing in the El Paso Police Academy sit next to one another on graduation day, with a badge officially over their chest and an emblem pinned by the chief over their heart.
+“The real work is about to begin,” Officer Nathaniel Guevara said.
+The 133rd Academy Class of the El Paso Police Department has officially ‘Become the Badge.’
+{sd-embed class="sd-embedded-media" data-alt="KFOX" data-caption="WATCH:%20Emotion-filled%20graduation%20for%20133rd%20El%20Paso%20Police%20Academy%7B%7D%7Bp%7D%7B/p%7D" data-duration="425.344" data-externalid="f36861107c0e4a8cba175cb0286c890b" data-mediatype="video" data-renditions="" data-thumburl="/resources/media/7f5de658-6276-4cf1-b203-bb6a9e853fb1-medium16x9_IMG_5069.JPG" data-title="WATCH:%20Emotion-filled%20graduation%20for%20133rd%20El%20Paso%20Police%20Academy%20" data-url="https://sinclair-vod-assets.sinclairstoryline.com/f36861107c0e4a8cba175cb0286c890b/hls/index.m3u8" data-defaultthumb="" data-embed-file="%3Cdiv%20class=%22sda-VideoEmbed%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class=%22sda-video-media%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ciframe%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20width=%22560%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20height=%22315%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20class=%22sda-embeded-player-iframe%20sda-VideoEmbed-iframe%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20src=%22/resources/embeds/vod.html?externalId=f36861107c0e4a8cba175cb0286c890b%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20frameborder=%22no%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/iframe%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class=%22sda-video-info%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20class=%22sda-VideoEmbed-stopImage%22%20src=%22/resources/media/7f5de658-6276-4cf1-b203-bb6a9e853fb1-medium16x9_IMG_5069.JPG%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class=%22sda-VideoEmbed-caption%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%3ECaption:%20WATCH:%20Emotion-filled%20graduation%20for%20133rd%20El%20Paso%20Police%20Academy%7B%7D%7Bp%7D%7B/p%7D%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E" data-embed-type="video" contenteditable="false" }<="" sd-embed="">{/sd-embed}
+“It’s a major milestone in my life, I’ve never had something like this, or done this type of journey before so I’m just really glad that I made it this far,” Officer Alberto Seanez said.
+They made it this far because inside them, there’s a passion and call, to serve and protect.
+“It means being selfless for sure and having integrity,” Officer Francisco Chavez said.
+“It’s a big responsibility that all of us are going to have to live up to, cause if we don’t, we’re letting down the whole community,” Officer Gabriel Arias said.
+Flashbacks of the last 11 months rolling through their minds, as they will never forget where they started and the lessons they learned.
+“It ended exactly how I said it was going to end, on a better note for sure. I said it the first day and I’ll say it again, that first day was not me, this is me right here, prepared and well-looking, this is Francisco Chavez right here,” Chavez said.
+“I’m just glad I took that first step, I was very nervous in the very beginning,” Seanez said.
+RECOMMENDED:El Paso Police Department welcomes 16 new officers with graduation ceremony
+“They lost so many people, so the surviving 16, they’ve made it through, and they’ve gone through their own struggles, but as an academy staff member, I’m so proud of how far they’ve come and how far they’ve grown,” EPPD Officer and Academy Trainer Stephanie Han said.
+Behind every one of these new officers as they reached this milestone, was an even stronger family.
+“Seeing my family here, knowing that they’re watching you get pinned, those 43 weeks weren’t done alone, they were part of it as well,” Chavez said.
+“My parents are here, my grandma is here, so that feels really special,” Officer Gabriel Arias said.
+Officer Christopher Shingles' motivation was his daughter.
+It feels amazing to have her here to watch this accomplishment,” Shingles said. “Family is where it all starts and ends so for her to be here to see this, amazing.
+For Officer Guevara, it’s been his dad.
+Ever since I was a little kid I can remember my dad coming home in his uniform, so to wear this uniform and have him pin me it’s really an honor,” Guevara said. “The family that I met here, the comradery, these guys are more than just coworkers, classmates, they’re brothers and sisters and 11 months with them you truly feel that it is a family and I’m proud to be a part of it.
+As these new officers prepare to enter the force, academy instructors are proud of this class and say they are worthy of being El Paso Police Officers.
+It would be amazing to have a class of 50 graduate, but the 16 that we have are great recruits, the academy is almost 11 months and they’ve worked hard, so the quality of recruits we’re putting out in the field, it shows,” Han said. “There might be only two police officers going to each region from this academy class, but it is going to make a difference.
+You can watch our weekly segments every Wednesday on the KFOX14 Morning News and Sunday nights on KFOX14 News at Nine. Did you miss last week's segment? You can watch it online using this link.
+Sign up to receive the top interesting stories from in and around our community once daily in your inbox.
