@@ -19,16 +19,18 @@ WORKDIR /app
 # Copy virtual environment from builder
 COPY --from=builder /app/.venv /app/.venv
 
-# Copy application code
+# Copy application code (main files)
 COPY server.py ./
 COPY document_loader.py citation_validator.py template_generator.py feasibility_checker.py ./
 
 # ✅ CRITICAL: Copy docs directory explicitly
 COPY docs ./docs
 
-# Copy any other necessary directories
-COPY civic-ledger-gpt ./civic-ledger-gpt
-COPY civic-server ./civic-server
+# Copy CustomGPT config if exists
+COPY civic-ledger-gpt ./civic-ledger-gpt 2>/dev/null || true
+
+# Copy any other necessary Python modules
+COPY src ./src 2>/dev/null || true
 
 EXPOSE 8000
 
