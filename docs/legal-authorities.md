@@ -7,6 +7,10 @@
 **Applies to:** City of El Paso, EPWater (as public entity)
 
 ### Municipal Utility Regulation
+**Authority:** Texas Water Code Chapter 13 (utility rates and services)
+**Also Cited As:** TX Water Code Chapter 13 (utility rates and services)
+
+### Municipal Utility Regulation
 **Authority:** TX Local Gov't Code Chapter 212 (municipal regulations)
 **Authority:** TX Water Code Chapter 13 (utility rates and services)
 
