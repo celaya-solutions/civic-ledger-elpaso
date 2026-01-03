@@ -1,8 +1,7 @@
 # Civic Ledger — El Paso Proof Engine
 
-**Production-ready CustomGPT for proof-based civic accountability**
-
-Built by [Celaya Solutions](https://celayasolutions.com)
+**Production-ready CustomGPT for proof-based civic accountability**  
+Production-ready CustomGPT for proof-based civic controls on data center utility impacts in El Paso, TX and Doña Ana County, NM. Generates policy documents, records requests, and accountability frameworks. Built by [Celaya Solutions](https://celayasolutions.com)
 
 ---
 
