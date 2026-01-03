@@ -1,5 +1,25 @@
+# Ignore local development files
 fly.toml
 .git/
 __pycache__/
+*.pyc
+*.pyo
 .envrc
 .venv/
+civic-server/
+.env
+*.log
+*.sqlite-shm
+*.sqlite-wal
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# ⚠️ Do NOT ignore docs/ - we need it in the container
+# docs/
