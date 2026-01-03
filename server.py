@@ -8,12 +8,19 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
+import sys
+from contextlib import asynccontextmanager
+from io import TextIOWrapper
 from pathlib import Path
-from typing import Any
+from typing import Any, AsyncIterator
 
+import anyio
 from mcp.server import Server
-from mcp.server.stdio import stdio_server
-from mcp.types import Tool, TextContent, EmbeddedResource
+import mcp.types as mcp_types
+from anyio.streams.memory import MemoryObjectReceiveStream, MemoryObjectSendStream
+from mcp.shared.message import SessionMessage
+from mcp.types import EmbeddedResource, TextContent, Tool
 from pydantic import BaseModel, Field
 
 from document_loader import DocumentLoader
@@ -24,8 +31,70 @@ from feasibility_checker import FeasibilityChecker
 
 DOCS_PATH = Path("./docs")
 
-logging.basicConfig(level=logging.INFO)
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
 logger = logging.getLogger("civic-ledger-mcp")
+logger.setLevel(getattr(logging, LOG_LEVEL, logging.INFO))
+
+
+@asynccontextmanager
+async def stdio_server_skip_blanks(
+    stdin: anyio.AsyncFile[str] | None = None,
+    stdout: anyio.AsyncFile[str] | None = None,
+) -> AsyncIterator[
+    tuple[
+        MemoryObjectReceiveStream[SessionMessage | Exception],
+        MemoryObjectSendStream[SessionMessage],
+    ]
+]:
+    """Wrap stdio transport and ignore empty lines before JSON validation."""
+    if not stdin:
+        stdin = anyio.wrap_file(TextIOWrapper(sys.stdin.buffer, encoding="utf-8"))
+    if not stdout:
+        stdout = anyio.wrap_file(TextIOWrapper(sys.stdout.buffer, encoding="utf-8"))
+
+    read_stream_writer, read_stream = anyio.create_memory_object_stream[SessionMessage | Exception](0)
+    write_stream, write_stream_reader = anyio.create_memory_object_stream[SessionMessage](0)
+
+    async def stdin_reader():
+        try:
+            async with read_stream_writer:
+                async for line in stdin:
+                    if not line.strip():
+                        continue
+                    line_preview = line.rstrip("\n")
+                    if len(line_preview) > 1000:
+                        line_preview = line_preview[:1000] + "...[truncated]"
+                    logger.debug("stdin recv: %s", line_preview)
+                    try:
+                        message = mcp_types.JSONRPCMessage.model_validate_json(line)
+                    except Exception as exc:  # pragma: no cover
+                        await read_stream_writer.send(exc)
+                        continue
+
+                    session_message = SessionMessage(message)
+                    await read_stream_writer.send(session_message)
+        except anyio.ClosedResourceError:  # pragma: no cover
+            await anyio.lowlevel.checkpoint()
+
+    async def stdout_writer():
+        try:
+            async with write_stream_reader:
+                async for session_message in write_stream_reader:
+                    json_out = session_message.message.model_dump_json(by_alias=True, exclude_none=True)
+                    log_out = json_out
+                    if len(log_out) > 1000:
+                        log_out = log_out[:1000] + "...[truncated]"
+                    logger.debug("stdout send: %s", log_out)
+                    await stdout.write(json_out + "\n")
+                    await stdout.flush()
+        except anyio.ClosedResourceError:  # pragma: no cover
+            await anyio.lowlevel.checkpoint()
+
+    async with anyio.create_task_group() as tg:
+        tg.start_soon(stdin_reader)
+        tg.start_soon(stdout_writer)
+        yield read_stream, write_stream
 
 
 # Initialize components with defensive guards
@@ -246,7 +315,7 @@ async def read_resource(uri: str) -> str:
 
 async def main() -> None:
     """Run the MCP server"""
-    async with stdio_server() as (read_stream, write_stream):
+    async with stdio_server_skip_blanks() as (read_stream, write_stream):
         await server.run(
             read_stream,
             write_stream,
