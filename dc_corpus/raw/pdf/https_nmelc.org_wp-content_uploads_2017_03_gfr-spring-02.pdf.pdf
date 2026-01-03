@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>New Mexico Environmental Law Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="New Mexico Environmental Law Center is a non profit, public interest law firm that provides free and low-cost legal services on environmental matters throughout New Mexico.">
+    <meta name="keywords" content="environmental law, human rights, civil rights, pollution, remediation, public interest, non profit, legal services, new mexico">
+    <meta name="author" content="Garret P. Vreeland, Juana Colon">
+
+    <!-- Le styles -->
+    <link href="http://nmenvirolaw.org/?css=standard-css/bootstrap.v.1333119870" rel="stylesheet">
+    <link href="http://nmenvirolaw.org/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="http://nmenvirolaw.org/?css=standard-css/custom.v.1348688457" rel="stylesheet">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://nmelc.org/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://nmelc.org/assets/ico/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://nmelc.org/assets/ico/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="http://nmelc.org/assets/ico/icon-57.png">
+    
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Paprika|Kite+One|Petit+Formal+Script|Oldenburg' rel='stylesheet' type='text/css'>
+
+    <!-- bloomerang code -->
+    <script src="https://api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_5fa21c74-7342-11e5-8073-027eadd70a57" type="text/javascript"></script>
+
+  </head>
+<body>
+<a name="top"></a>
+
+<!-- Green Header Section ================================= -->
+
+
+<div class="header">
+<div class="container">
+<div class="row">
+  		<div class="span9 headerlogo"><img src="http://nmenvirolaw.org/images/uploads/nmel-toplogoandtype2.png" alt="The New Mexico Environmental Law Center" width="603" height="134" /></div>
+  		<div class="span3 headersearch">
+
+<form method="post" action="http://nmenvirolaw.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="XID" value="4ef0cf386ba864ef77df3095bc2c4769a560c256" />
+<input type="hidden" name="RES" value="" />
+<input type="hidden" name="meta" value="YEA6D8R5PrDqZ4KbsiwmH9y2BDcQ+rlFMYNRfZazUR01pdWOUPRNC2kWwzt+JOKYS2gYsham9CZ+9Tp8LHIYEUdMHPVTfZ8uZU8IwvfJ5VTvITslLLFeoKZHApWOGilW3i+tqcF6boZtKFqnTngg/v+SR1HSKB/tUp/S94cWOsuUky6pfKDE5kuIn8buZYt31XvWanic7xzh2PWhnTb9JNeSH0ClGVPR9wq26k5oKTyFWPe9NmvwDQGEW27JjCKytLksfTtfxD+3TqhCYZsXh9AGoZm1V+imW4Bj/HA8QtRDZPI+L8uMqXsns4J2+/MSzM6GKcIBmlnMyp7UDTgTpw==" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+<input name="keywords" type="text" value=" " maxlength="100" size="30" /> 
+<input type="submit" name="submit" value="GO" class="headergobutton btn btn-warning" />
+</form>
+
+  		</div>
+</div>
+</div>
+</div>
+
+<!-- Black NavBar Section ================================= -->
+
+<div class="container">
+<div class="navbar">
+
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <!-- <a class="brand" href="#">Brand</a> -->
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="http://nmelc.org/">Home</a></li>
+              <li><a href="http://nmelc.org/about">About Us</a></li>
+              
+              <li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
+    					<ul class="dropdown-menu">
+                                                
+    						<li><a href="http://nmelc.org/nmelcnews">NMELC in the Press</a></li>
+    						<li><a href="http://nmelc.org/pressreleases">Press Releases</a></li>
+    						<li><a href="http://nmelc.org/newsletters">Newsletters</a></li>
+    						<li><a href="http://nmelc.org/events">Events</a></li>
+    						<li><a href="http://nmelc.org/awards">Awards</a></li>
+    					</ul>    					
+  			  </li>
+  			  <li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cases <b class="caret"></b></a>
+    					<ul class="dropdown-menu">
+    						<li><a href="http://nmelc.org/case-docket">Case Docket</a></li>
+    						<li><a href="http://nmelc.org/cases-energyclimate">Energy/Climate Change</a></li>
+    						<li><a href="http://nmelc.org/cases-enviro">Environmental Justice</a></li>
+    						<li><a href="http://nmelc.org/cases-mining">Hard Rock Mining</a></li>
+    						<li><a href="http://nmelc.org/cases-native">Native American</a></li>
+    						<li><a href="http://nmelc.org/cases-uranium">Uranium</a></li>
+    						<li><a href="http://nmelc.org/cases-water">Water</a></li>
+    						<li><a href="http://nmelc.org/cases-other">Other</a></li>
+    					</ul>    					
+  			  </li>
+  			  
+  			  <!-- <li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Issues <b class="caret"></b></a>
+    					<ul class="dropdown-menu">
+      						<li><a href="http://nmelc.org/issues">Issues Overview</a></li>
+    						
+    						
+    						
+    						
+    					</ul>    					
+  			  </li> -->
+	
+
+
+	      <li><a href="http://nmelc.org/greenbusiness">Green Business Partners</a></li>
+             <li><a href="http://nmelc.org/events">Events</a></li>
+        <!--  <li><a href="http://nmelc.org/employment">Employment</a></li> -->
+		<li><a href="http://nmelc.org/media">Video</a></li>
+             <!-- <li><a href="http://nmelc.org/takeaction" style="color:#FFe79f;"><strong>Take Action</strong></a></li>  comment this line out, if no take action items are current -->
+              <li><a href="http://nmelc.org/contact">Contact Us</a></li>
+              
+
+            </ul>
+            <div class="socialicons">Follow 
+            <a href="https://www.facebook.com/NMELC" target="_blank" title="Facebook"><img src="http://nmenvirolaw.org/assets/img/icon-facebook.png" alt="Like NMELC on Facebook" width="21" height="21" /></a>
+            <a href="http://www.twitter.com/NMELC" target="_blank" title="Twitter"><img src="http://nmenvirolaw.org/assets/img/icon-twitter.png" alt="Follow NMELC on Twitter" width="21" height="21" /></a>
+        <!-- <a href="http://www.youtube.com/theNMELC" target="_blank" title="Youtube"><img src="http://nmenvirolaw.org/assets/img/icon-youtube.png" alt="Watch NMELC videos on YouTube" width="21" height="21" /></a> -->
+        <!-- <a href="http://nmenvirolaw.org/index.php/rss-files/rss_2.0/" target="_blank" title="Subscribe to RSS"><img src="http://nmenvirolaw.org/assets/img/icon-rss.png" alt="Subscribe to the NMELC RSS Feeds" width="21" height="21" /></a> -->
+	    <a href="http://nmenvirolaw.org/signup" title="Sign up for our email list"><img src="http://nmenvirolaw.org/images/uploads/emailsignup.gif" alt="Sign up and stay informed!" height="25" width="156" style="border: 0;" alt="image" title="Sign up and stay informed!"/></a>
+            </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+      
+
+	</div>
+	</div>
+
+<!-- MAIN CONTENT and SIDEBAR Sections ================================= -->
+
+<div class="container maincontainer">
+      
+<div class="row">
+<div class="span8">
+  		
+<div id="myCarousel" class="carousel" style="margin:20px 0px 0px 30px;">
+  		
+<!-- CAROUSEL SLIDER IMAGES GO HERE || 620 px wide, consistent height ========================================================================= -->
+<div class="carousel-inner">
+  		
+<div class="active item"><a href="http://nmenvirolaw.org/site/more/match_madness_2017"><img src="http://nmenvirolaw.org/images/uploads/Match_Madness.png" alt="Help us meet the challenge!" height="250" width="620" style="border: 0;" alt="image" /></a></div>
+<div class="item"><a href="http://nmenvirolaw.org/site/more/sweetwater_harvest_kitchen_supports_the_nmelc"><img src="http://nmenvirolaw.org/images/uploads/Sweetwater_promo_03-17.png" alt="" height="250" width="620" style="border: 0;" alt="image" /></a></div>
+<div class="item"><img src="http://nmenvirolaw.org/images/uploads/30th_save_the_date.png" alt="Save the date!" height="250" width="620" style="border: 0;" alt="image" /></div>
+<div class="item"><a href="http://nmenvirolaw.org/site/more/groups_ask_judge_to_declare_new_lanl_consent_order_invalid"><img src="http://nmenvirolaw.org/images/uploads/LANL-missed-deadlines.png" alt="LANL missed cleanup deadlines" height="250" width="620" style="border: 0;" /></a></div>
+<div class="item"><a href="http://nmenvirolaw.org/site/more/local_jeweler_donates_percent_of_purchases_to_nmelc"><img src="http://nmenvirolaw.org/images/uploads/Reflective-Images.png" alt="Reflective Images Jewelry" height="250" width="620" style="border: 0;" alt="image" /></a></div>
+</div>
+
+
+ <!-- Carousel nav -->
+<a class="carousel-control left" href="#myCarousel" data-slide="prev" style="margin-top:150px;margin-left:540px;">&lsaquo;</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next" style="margin-top:150px;">&rsaquo;</a>
+</div>
+
+<br />
+
+<div class="newsarea">
+
+<div class="main-top-thinline"><hr class="no-line" /></div>
+
+<h1>UPDATES</h1>
+<div class="main-thickline"><hr class="no-line" /></div>
+
+<!-- MAIN LOOP START =================================================================================== -->
+
+
+
+<h2><a href="http://nmenvirolaw.org/site/more/bernalillo_county_to_look_at_next_step_in_santolina_development">Bernalillo County to look at next step in Santolina development</a></h2>
+<p>Bernalillo County Commissioners will be looking at approving the next step in getting the controversial Santolina development started on Albuquerque’s Westside&#8230;The biggest concern by opponents from the beginning has been water. An appeal by the New Mexico Environmental Law Center has been filed an appeal on behalf of opposing organizations. <em>KRQE.com</em></p>
+
+<p>Go to <a href="http://krqe.com/2017/03/13/bernalillo-county-to-look-at-next-step-in-santolina-development/" target="_blank"><em>KRQE.com</em></a> for full story.</p>
+
+
+<!-- podcast interface -->
+
+<!-- end podcast interface -->
+
+
+<p class="newssource">03/14/2017 &bull;
+
+
+
+<a href="#top">Back to top</a>
+
+</p>
+
+<div class="main-thinline"><hr class="no-line" /></div>
+
+
+
+
+
+<h2><a href="http://nmenvirolaw.org/site/more/magdalena_school_board_amends_water_grab_protest">Magdalena school board amends water grab protest</a></h2>
+<p>“Mr. Chambers had signed the petition in the name of Magdalena Schools and the problem is only the board can enter into a lawsuit for the school, not the superintendent. And this is a lawsuit,” Jaramillo said. “The concern by the school board at the time on Monday was is this going to cost us something&#8230;so we felt like it was OK to withdraw and instructed (Superintendent) Dr. (Vannetta) Perry to go ahead and write the letter to withdraw the [protest] on the petition.”</p>
+
+<p>However, in a telephone interview, Meiklejohn told El Defensor Chieftain there was, in fact, no lawsuit and that the normal application process was on schedule. <em>El Defensor Chieftain</em></p>
+
+<p>Go to <a href="http://www.dchieftain.com/news/magdalena-school-board-amends-water-grab-protest/article_356e108a-0443-11e7-b4b0-ab5445abb5da.html" target="_blank"><em>El Defensor Chieftain</em></a> for full story.</p>
+
+
+<!-- podcast interface -->
+
+<!-- end podcast interface -->
+
+
+<p class="newssource">03/09/2017 &bull;
+
+
+
+<a href="#top">Back to top</a>
+
+</p>
+
+<div class="main-thinline"><hr class="no-line" /></div>
+
+
+
+
+
+<h2><a href="http://nmenvirolaw.org/site/more/residents_to_weigh_in_on_uranium_ordinance">Residents to Weigh in on Uranium Ordinance</a></h2>
+<p><em><strong>Commission reverses effort to bury ordinance, Special meeting March 14</strong></em></p>
+
+<p>With help from the Law Center and its members, affected community members have a chance to push for a three year moratorium on uranium mining in McKinley County.&nbsp; <span style="float:right;margin:0px 0px 8px 8px;"><a href="http://nmenvirolaw.org/images/uploads/PubNot_3-14-2017_spec_meeting.jpg" alt="" height="1078" width="720" style="border: 0;" alt="image" /><img src="http://nmenvirolaw.org/images/uploads/PubNot_3-14-2017_McK_letter.jpg" alt="" height="211" width="145" style="border: 0;" alt="image" target="_blank" /></a><br />&nbsp;&nbsp;&nbsp;<span style="font-size:11px;">Click to read meeting notice</span></span><strong>A special meeting on uranium mining is scheduled before the McKinley County Commission on Tuesday, March 14 at 1:30 pm.</strong></p>
+
+<p style="padding-left: 30px;"><strong>Time</strong>:&nbsp;1:30 PM&thinsp;-&thinsp;2:30 PM<br /><strong>Location</strong>:&nbsp;McKinley Courthouse, 3rd floor in Commissioner Chambers<br /><strong>Address</strong>:&nbsp;207 W. Hill,&nbsp;Gallup, NM 87301 (<a href="https://goo.gl/maps/wEV3b7JDh1J2" target="_blank">map</a>)</p>
+
+<p><strong>Members of the public are strongly encouraged to attend.</strong></p>
+
+<p>This meeting comes after the <a href="http://nmenvirolaw.org/site/more/mckinley_county_gets_notified_over_open_meetings_act_violations">Law Center threatened to sue the Commission</a> for violating the state’s Open Meetings Act. In violation of the law, the commission had put the moratorium on the agenda of a little-publicized meeting on January 3; after telling community advocates that the moratorium would be heard on January 10. <a href="http://nmenvirolaw.org/site/cases/mckinley_county_moratorium_on_uranium_mining">See case page</a>.</p>
+
+
+<!-- podcast interface -->
+
+<!-- end podcast interface -->
+
+<p class="extendedentry" style="margin-bottom:0px;"><a href="http://nmenvirolaw.org/site/more/residents_to_weigh_in_on_uranium_ordinance">Read entire article ></a></p>
+
+<p class="newssource">03/06/2017 &bull;
+
+
+
+<a href="#top">Back to top</a>
+
+</p>
+
+<div class="main-thinline"><hr class="no-line" /></div>
+
+
+
+
+
+<h2><a href="http://nmenvirolaw.org/site/more/round_2_santolina_hearing">ROUND 2: Santolina Hearing</a></h2>
+<p>Despite its failure to meet critical requirements, the massive Santolina juggernaut continues to roll over county approval processes. In January, the Bernalillo County Planning Commission gave its recommendation to approve the B.1 Level Master Plan from the developer.</p>
+
+<p>The Law Center already has <a href="target="_blank"images/pdf/170125_Santolina_Amnd_Appeal.pdf" target="_blank">lodged its appeal</a> of the Planning Commission’s recommendation with the Bernalillo County Commission, which will be the next body to consider the Level B plans. </p>
+
+<p><strong>A <a href="http://bernalillocountynm.iqm2.com/Citizens/Detail_Meeting.aspx?ID=1677" target="_blank">hearing is scheduled</a></strong> for <strong>Tuesday, March 14 at 3 PM</strong> to hear both NMELC’s appeal and the developer’s Level B.1 Master Plan. <a href="http://bernalillocountynm.iqm2.com/Citizens/Detail_Meeting.aspx?ID=1677" target="_blank"><em>Get meeting details</em></a>. <a href="http://nmenvirolaw.org/http://nmenvirolaw.org/site/cases/santolina_proposed_development">Visit Santolina case page</a>.</p>
+
+
+<!-- podcast interface -->
+
+<!-- end podcast interface -->
+
+<p class="extendedentry" style="margin-bottom:0px;"><a href="http://nmenvirolaw.org/site/more/round_2_santolina_hearing">Read entire article ></a></p>
+
+<p class="newssource">03/06/2017 &bull;
+
+
+
+<a href="#top">Back to top</a>
+
+</p>
+
+<div class="main-thinline"><hr class="no-line" /></div>
+
+
+
+
+
+<h2><a href="http://nmenvirolaw.org/site/more/sweetwater_harvest_kitchen_supports_the_nmelc">Sweetwater Harvest Kitchen Supports the NMELC all Through March!</a></h2>
+<p><span style="float:right;margin:0px 0px 1px 5px;"><a href="http://www.sweetwatersf.com" target="_blank"><img src="http://nmenvirolaw.org/images/uploads/sweetwater_sm.jpg" alt="Sweetwater" height="200" width="137" style="border: 0;" alt="image" /></a></span><br />
+Join us at Santa Fe&#8217;s own <a href="http://www.sweetwatersf.com" target="_blank">Sweetwater Harvest Kitchen</a> all through March <strong>2% of each cash purchase will be donated to the Law Center!</strong> </p>
+
+<p>It&#8217;s a delicious way to support environmental protection in New Mexico. See you there!</p>
+
+<p><strong>Sweetwater Harvest Kitchen</strong><br />
+1512 Pacheco Street (<a href="https://www.google.com/maps/place/Sweetwater+Harvest+Kitchen/@35.6668295,-105.9621413,17z/data=!4m7!1m4!3m3!1s0x8718507d6a6cf9ef:0x8a8c377ff92552a3!2s1512+Pacheco+St,+Santa+Fe,+NM+87505!3b1!3m1!1s0x0000000000000000:0x3bf3069ceb73c676?hl=en" target="_blank">map</a>)<br />
+Building B<br />
+Santa Fe, New Mexico 87505<br />
+505.795.7383</p>
+
+
+<!-- podcast interface -->
+
+<!-- end podcast interface -->
+
+
+<p class="newssource">03/01/2017 &bull;
+
+
+
+<a href="#top">Back to top</a>
+
+</p>
+
+<div class="main-thinline"><hr class="no-line" /></div>
+
+
+
+
+
+<h2><a href="http://nmenvirolaw.org/site/more/bill_to_bring_back_oil_and_gas_pollution_penalty_moves_forward">Bill to bring back oil and gas pollution penalty moves forward</a></h2>
+<p>Under the Safe Drinking Water Act, the U.S. Environmental Protection Agency can authorize states to take over certain regulatory duties. Under that program, states must be able to assess penalties against companies that pollute water. But in New Mexico, the state’s Oil Conservation Division (OCD) hasn’t been able to do that for years. <em>New Mexico Political Report</em></p>
+
+<p>Go to <a href="http://nmpoliticalreport.com/173868/oil-and-gas-penalty-bill-moves-forward-en/" target="_blank"><em>New Mexico Political Report</em></a> for full story.</p>
+
+
+<!-- podcast interface -->
+
+<!-- end podcast interface -->
+
+
+<p class="newssource">02/23/2017 &bull;
+
+
+
+<a href="#top">Back to top</a>
+
+</p>
+
+<div class="main-thinline"><hr class="no-line" /></div>
+
+
+
+
+<div class="paginate">
+Page 1 of 106 pages  &nbsp;<strong>1</strong>&nbsp;<a href="http://nmenvirolaw.org/images/pdf/gfr-spring-02.pdf/P6">2</a>&nbsp;<a href="http://nmenvirolaw.org/images/pdf/gfr-spring-02.pdf/P12">3</a>&nbsp;<a href="http://nmenvirolaw.org/images/pdf/gfr-spring-02.pdf/P6">&gt;</a>&nbsp;&nbsp;<a href="http://nmenvirolaw.org/images/pdf/gfr-spring-02.pdf/P630">Last &rsaquo;</a>
+</div>
+
+
+<!-- MAIN LOOP END =================================================================================== -->
+
+</div>
+</div> <!-- end span8 div - MAIN CONTENT, LEFT -->
+  		
+ 
+
+
+<!-- BEGIN SIDEBAR =========================== -->
+<div class="span4 sidebar">
+  		
+<p align="center"><a class="btn btn-danger btn-large donatebutton" 
+
+href="https://crm.bloomerang.co/HostedDonation?ApiKey=pub_5fa21c74-7342-11e5-8073-027eadd70a57&WidgetId=1073152"
+ target="_blank" style="color:#ffffff;">DONATE NOW</a></p>
+
+
+<!-- UNCOMMENT below line if you use this featurebox -->
+
+<link href='http://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+
+<p align="center" style="font-size:13px;color:#114234;" ><em>We protect New Mexico's communities<br /> and their air, land and water in the fight for 
+environmental justice.</em></p>
+
+<p align="center"><a href="http://nmenvirolaw.org/site/more/match_madness_2017"><img src="http://nmenvirolaw.org/images/uploads/Match_Madness_btn17.png" alt="Help us make 
+the goal!" height="260" width="224" style="border: 0;" alt="image" /></a></p>
+
+
+<!-- <p align="center"><a href="http://nmenvirolaw.org/site/newsletters"><img src="http://nmenvirolaw.org/images/uploads/GFR-link-box.gif" alt="" height="87" width="258" 
+style="border: 0;" alt="image" /></a></p>
+<p style="margin:0px 30px 0px 30px;">- <a href="http://nmenvirolaw.org/site/more/20_years_crownpoint_case_origin_story"><strong>
+20 Years: The Crownpoint Case Origin Story</strong></a><br />
+</p>
+
+<div align="center" style="border: 4px solid red;"><br /><a href="https://squareup.com/market/nmelc" target="_blank" >
+<img src="http://nmenvirolaw.org/images/uploads/merchbutton2015.png" alt="NMELC Merchandise!" height="148" 
+width="255" style="border: 0;" alt="image" /></a><br /><br /></div> -->
+
+<br />
+
+ <!-- <div style="border: 3px dotted gray;margin:0px 12px 5px 0px;"><img src="http://nmenvirolaw.org/images/uploads/GFT_banner_sm.gif" style="border: 0;" 
+alt="image" width="293" height="47" />
+
+
+ <!-- <div class="sidebar-thinline"><hr class="no-line" /></div> -->
+
+
+<div class="sidebar-thinline"><hr class="no-line" /></div> <!-- thin line -->	
+
+<h2>PRESS RELEASES</h2>
+<div class="sidebar-thickline"  style="margin-bottom:10px;"><hr class="no-line" /></div> <!-- THICK line -->
+
+
+<h3>McKinley County Gets Notified Over Open Meetings Act Violations</h3>
+<p><p><em>GRANTS, N.M. </em>— On behalf of two community groups, the New Mexico Environmental Law Center submitted a <a href="http://nmenvirolaw.org/images/pdf/170213_Notice_of_Intent_to_Sue.pdf" target="_blank" >notice of intent to sue</a> today to the McKinley County Commission identifying a possible Open Meetings Act Violation related to a meeting held in January 2017. Groups signing onto the letter include Red Water Pond Road and Eastern Navajo Dine Against Uranium Mining. The letter outlines that the county failed to give proper notice about the meeting to the public, and didn’t publish the agenda in advance of the meeting.</p></p>
+
+<h3>NMELC Honors Two for Protecting Water, Names One Toxic Turkey</h3>
+<p><p><strong><em>Former Environment Department Secretary Ryan Flynn becomes the first person to be twice awarded the Toxic Turkey</em></strong></p>
+
+<p>SANTA FE, N.M. — Two New Mexicans were honored by the New Mexico Environmental Law Center on Sunday for their extraordinary contributions to protecting New Mexico’s water; a third was named the first two-time recipient of the Toxic Turkey.</p>
+
+<p>Beginning in 1992, NMELC has recognized people who make incredible contributions to protect New Mexico communities from becoming pollution dumping grounds.</p>
+
+<p>The annual Toxic Turkey is given to draw attention to the actions of a person, agency or company whose actions have endangered New Mexico’s environment.&nbsp; This is the second win for former Environment Department Secretary Ryan Flynn.</p></p>
+
+
+<h4 class="sidebarlinkmore"><a href="http://nmenvirolaw.org/index.php/site/pressreleases/">Read all of our press releases</a></h2>
+
+ <div class="sidebar-thinline"><hr class="no-line" /></div> <!-- thin line -->
+  		
+
+<h2>Thanks to our Green Business Partner:</h2>
+
+<p><script language="javascript">
+<!--
+var b1dis = "<a href=\"";
+var bdis = "\"><img src=\"";
+var edis = " alt=\"green business partners\" border=\"1\" style=\"border:1px solid rgb(102, 0, 0);\"></a>";
+var rnumb = "";
+var img = "";
+rnumb += Math.floor(Math.random()*6);
+img = rnumb;
+if (img == "0") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-a1storage2.jpg\"" +edis);
+}
+if (img == "1") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-dunbarstainedglass2.jpg\"" +edis);
+}
+if (img == "2") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-grace2.jpg\"" +edis);
+}
+if (img == "3") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-keshi2.jpg\"" +edis);
+}
+if (img == "4") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-verve2.jpg\"" +edis);
+}
+if (img == "5") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-ewell.jpg\"" +edis);
+}
+if (img == "6") {
+document.write(b1dis+ "http://nmelc.org/greenbusiness" +bdis+ "http://nmenvirolaw.org/images/rotator/gbp-neillyon2.jpg\"" +edis);
+}
+// -->
+</script></p>
+
+<br /><br />
+
+<p align=center><a href="http://onlyoffice.com?campaign=nonprofit" target="_blank" style="cursor: pointer;" rel="me nofollow">
+<img alt="Projects CRM Documents" title="Projects CRM Documents" src='http://www.onlyoffice.com/images/banners/en-US/125-x-125-01.jpg' /></a></p>
+  		  		  		
+</div><!-- END SIDEBAR -->
+  		
+</div>
+</div> <!-- /container -->
+     
+<!-- FOOTER  Section ================================= --> 
+
+<div class="footer">
+
+<div class="container">
+<div class="row">
+
+		<!-- Footer Column One ================================= -->
+		
+  		<div class="span4">
+  		<h1>CONTACT US</h1>
+  		<p><strong>New Mexico Environmental Law Center</strong><br />
+  		1405 Luisa Street, Suite 5<br />
+		Santa Fe, New Mexico 87505<br />
+		Telephone: (505) 989-9022<br />
+		Fax: (505) 989-3769<br />
+  		Email: <a href="mailto:nmelc@nmelc.org">nmelc@nmelc.org</a>
+  		</p>
+  		<br />
+  		<p><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=wqztmdcab&p=oi&m=1101773006358&sit=jtaw9ircb&f=d2d2edad-ad48-4f4c-8aea-a8b36d85215c" target="_blank">Join our Mailing List</a><br />
+		<a href="http://nmelc.org/privacy-policy/" target="_blank">Privacy Policy</a></p>
+		<br />
+		<p>Federal Tax ID# 85-0360664</p>
+  		</div>
+  		  		
+ 		<!-- Footer Column Two ================================= --> 		  		
+  		
+  		<div class="span4">
+  		<div align="left" class="facebook">
+		<!-- FB stream widget -->	
+
+		<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FNMELC&amp;width=284&amp;height=558&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23c1bca5&amp;stream=true&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:284px; height:558px;margin:0px;" allowTransparency="true"></iframe>
+
+		<!-- End FB stream widget -->
+		</div>
+  		</div>
+  		
+  		<!-- Footer Column Three ================================= -->
+  		
+  		<div class="span4">
+  		<div class="twitter">
+
+
+<a class="twitter-timeline" href="https://twitter.com/NMELC" data-widget-id="347143576112742401">Tweets by @NMELC</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+		</div>
+		
+  		</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- JAVASCRIPTS AT THE BOTTOM, FOR FASTER PAGE LOADS ================================================== -->
+    
+    <script src="http://nmelc.org/assets/js/jquery.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-transition.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-alert.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-modal.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-tab.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-popover.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-button.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-collapse.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://nmelc.org/assets/js/bootstrap-typeahead.js"></script>
+  
+	<script type="text/javascript"> 
+        $('.carousel').carousel({ 
+          interval: 4000 
+        }) 
+	</script> 
+
+<!-- Google Analytics Tracking Code ================================= -->
+
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-6112184-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,3680 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Spectrum News | Kansas City</title>
+<meta charset="utf-8"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+
+    <meta name="description" content="Get breaking news and more from Spectrum News Kansas City."/>
+
+
+
+
+
+
+
+
+<meta name="tp:preferredRuntimes" content="HTML5,Flash"/>
+<meta name="tp:PreferredFormats" content="MPEG4"/>
+<meta name="x-client-id" content="spectrumlocalnews.com"/>
+
+
+
+
+<meta name="keywords" content="Kansas City"/>
+<meta name="news_keywords" content="Kansas City"/>
+
+
+
+<!--Preconnect and DNS-Prefetch to improve page load time.-->
+<link rel="preconnect" href="//roadrunner.tt.omtrdc.net"/>
+<link rel="preconnect" href="//metrics.timewarnercable.com"/>
+
+<link rel="dns-prefetch" href="//roadrunner.tt.omtrdc.net"/>
+<link rel="dns-prefetch" href="//metrics.timewarnercable.com"/>
+
+
+<!--/Preconnect and DNS-Prefetch-->
+<!--Data Layer to enable rich data collection and targeting-->
+<script type="text/javascript">
+
+    var template = "";
+    var pageType, region, parentRegion, vodAuth = "", articleStorage = "";
+
+    switch (template) {
+        case '/apps/news/templates/article':
+            template = 'Article Template';
+            pageType = 'Article';
+            articleStorage = 'live'
+            break;
+        case '/apps/news/templates/full-width-page':
+            template = 'Standard Full Width Template';
+            pageType = 'Home';
+            break;
+        case '/apps/news/templates/event':
+            template = 'Calendar Event Template';
+            pageType = 'Event';
+        case '/apps/news/templates/archive':
+            template = 'Archive Article Template';
+            pageType = 'Archive';
+            articleStorage = 'archived';
+        default:
+            template = 'Standard Full Width Template';
+            pageType = 'Home';
+    }
+
+    // Initialize variables to store page region and title values
+    let pageRegionValue, pageTitleValue = '';
+    // Define the page name 
+    let pageNameValue = "kansas\u002Dcity";
+    // Check if the page name includes 'splash'
+    if (pageNameValue === 'splash') {
+        // Set page region to 'All Regions' and page title to 'Spectrum News Market Map' for splash pages
+        pageRegionValue = 'All Regions';
+        pageTitleValue = 'Spectrum News Market Map';
+    } else {
+        //set page region and title for non-splash pages
+        pageRegionValue = "Kansas City";
+        pageTitleValue = "Spectrum News | Kansas City";
+    }
+
+    window.digitalData = window.digitalData || {
+        event: {
+            eventName: "pageView",
+            adobeEventName: ''
+
+        },
+        user: {
+            isAuthenticated: localStorage.getItem('authenticated') && localStorage.getItem('authenticated') === 'true'  ? 'Yes' : 'No',
+            isAuthorized: localStorage.getItem('authenticated') && localStorage.getItem('authenticated') === 'true' ? 'true' : 'false',
+            mvpd: "",
+            hhid: ""
+        },
+        page: {
+            adsOnPage: "",
+            appID: "AEM 6.4", // hardcoded
+            domain: window.location.hostname,
+            flow: "",
+            // Determine page language based on 'spectrumnoticias' domain and HTML lang attribute
+            language: window.location.host.includes('spectrumnoticias') ? 'es' : document.getElementsByTagName('html')[0].getAttribute('lang'),
+            pageID: "\/content\/news\/mo\/kansas\u002Dcity",
+            pageName: pageNameValue,
+            pageRegion: pageRegionValue,
+            pageRegionParent: "MO",
+            pageTemplate: template,
+            pageTitle: pageTitleValue,
+            pageFunction: pageType,
+            platformName: "web", // hardcoded
+            previousLink: "",
+            siteSection: "",
+            siteSubsection: "",
+            sourceMarketTag: "",
+            tags: "regions:mo\/kansas\u002Dcity",
+            url: window.location.href,
+            uxStyle: "empire",
+            contentAccessLevel: "",
+            mktgCampaignShown: "no",
+            mktgCampaignName: ""
+        },
+        content: {
+            Article: {
+                articleGUID: "",
+                articleHeadline: "",
+                articleTitle: "",
+                author: "",
+                publicationDate: "0",
+                articleViewedAge: "",
+                canonicalRegion: "",
+                articleSource: "",
+                articleStorage: articleStorage,
+                liveToggleOn:""
+            },
+            Page: {
+                pageContentNetwork: "",
+                pageContentShow: ""
+            },
+            Video: {
+                epgsDescription: "",
+                epgsTitle: "",
+                tmsProgramId: "",
+                tmsSeriesId: "",
+                videoBrand: "",
+                videoNetwork: "",
+                programType: ""
+            }
+        },
+        visit: {
+            visitId: "",
+            ab: "",
+            behindModem: "",
+            homeFlag: ""
+        },
+        errors: {
+            cmRuleName: "",
+            cmDisplayText: "",
+            errorType: "",
+            errorDescription: ""
+        },
+        search: {
+            searchNumResults: "",
+            searchResultsPages: "",
+            searchType: "",
+            searchKeyword: ""
+        },
+        siteTool: {
+            shareMethod: ""
+        }
+
+    }
+
+      window.addEventListener('userStatus', function (event) {
+        if (event.detail.usrAuth ) {
+            window.digitalData.user.isAuthorized = 'true';
+            window.digitalData.user.isAuthenticated = 'Yes';
+        }else{
+            window.digitalData.user.isAuthorized = 'false';
+             window.digitalData.user.isAuthenticated = 'No';
+        }
+    });
+
+    window.addEventListener("userInteraction", function (event) {
+        if (event.detail.action === "loginSuccess") {
+            window.digitalData.user.hhid = event.detail.hhid;
+            window.digitalData.user.mvpd = event.detail.mvpd;
+            window.analyticsDataLayer.hhid = event.detail.hhid;
+            let autoAuth = localStorage.getItem("autoAuth");
+            if (autoAuth && autoAuth === 'true') {
+                News.App.QuantumAnalytics.autoLoginSuccess(event.detail.hhid, event.detail.mvpd);
+            } else {
+                News.App.QuantumAnalytics.firesQuantumLoginStopSuccess(event.detail.hhid, event.detail.mvpd);
+            }
+        }
+    });
+
+    function updateDigitalData(newCampaignElements){
+        window.digitalData.page.mktgCampaignShown = 'yes';
+        newCampaignElements.forEach(newElement => {
+            let newCampaignName;
+            let newCampaignContent = newElement.querySelector('.campaign__content');
+            if (newCampaignContent) newCampaignName = newCampaignContent.dataset.campaignName; 
+            if (newCampaignName && window.digitalData.page.mktgCampaignName) {
+                window.digitalData.page.mktgCampaignName = window.digitalData.page.mktgCampaignName + "," + newCampaignName;
+            } else if (newCampaignName) {
+                window.digitalData.page.mktgCampaignName = newCampaignName;
+            }
+        })
+    }
+
+    function findNewMatchingElements(nodes) {
+        const matches = [];
+        nodes.forEach(node => {
+            if (!(node instanceof Element)) return;
+            if (node.classList.contains('campaign--container')) {
+                matches.push(node);
+            }
+            // check descendants
+            const descendant = node.querySelector('.campaign--container');
+            if (descendant && descendant.length) matches.push(descendant);
+        })
+        return matches;
+    }
+
+    const campaignObserver = new MutationObserver((mutationsList) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length) {
+                const newCampaignElements = findNewMatchingElements(Array.from(mutation.addedNodes));
+                if (newCampaignElements.length) updateDigitalData(newCampaignElements);
+            }
+        }
+    })
+
+    campaignObserver.observe(document.documentElement || document.body, {
+        childList: true,
+        subtree: true,
+    });
+
+    // Initial handler in case some campaign elements already exist in DOM
+    findNewMatchingElements(Array.from(document.querySelectorAll('.campaign--container')));
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        digitalData.event.adobeEventName = document.getElementById('analyticsDataLayer').getAttribute('data-content-type') === 'article' ? "pageview, contentView, articleView" : '';
+        campaignObserver.disconnect();
+    });
+
+    /**
+     * workaround to get the hhid that is coming in late
+     * NEWS-1055
+     *
+     **/
+    var _interval = setInterval(fetchLateHHID, 3000);
+
+    function fetchLateHHID() {
+        try {
+            var auth = Cookies.get('authenticated')
+            if (typeof auth !== 'undefined' && auth === 'true') {
+                var retHhid = Cookies.get('player-hhid');
+                if (typeof retHhid === "undefined") {
+                    retHhid = "";
+                } else if (window.digitalData.user.hhid !== "" && window.analyticsDataLayer.hhid !== "") {
+                    clearInterval(_interval);
+                } else {
+                    $('#analyticsDataLayer').attr('data-hhid', retHhid);
+                    window.analyticsDataLayer.hhid = retHhid;
+                    window.analyticsDataLayer.mvpd = Cookies.get('player-mvpd');
+                    window.digitalData.user.hhid = retHhid;
+                    window.digitalData.user.isAuthenticated = 'Yes';
+                    window.digitalData.user.mvpd = Cookies.get('player-mvpd');
+                }
+            } else {
+                clearInterval(_interval);
+            }
+        } catch (e) {
+        }
+
+    }
+
+</script>
+<!--/Data Layer-->
+<!--jQuery or other helper libraries go here-->
+<script src="https://www.google.com/recaptcha/api.js?query=nocache" async defer></script>
+<!--  Helix -->
+<script>
+    // use the following to check for the events
+    // https://cdn.pi-charter.net/SpectrumLocal/Web/1.146.json
+
+    // Update packageReleaseVersion here when releasing AEM package deploys between full releases. Ex: 1, 2, 3
+    // Value should be a blank string for full releases.
+    var packageReleaseVersion = "0";
+
+    var appReleaseVersion = "7.12.0.SNAPSHOT";
+    appReleaseVersion = appReleaseVersion.replace('.SNAPSHOT', '');
+    appReleaseVersion = appReleaseVersion + (packageReleaseVersion ? '.' + packageReleaseVersion : '');
+
+    var helixSetting = {
+        domain: "video",
+        appName: "SpectrumLocal",
+        appVersion: appReleaseVersion,
+        requirementsVersion: "2.752",
+        msgTriggeredBy: "user",
+        startSession: "SpectrumLocal_Web_startSession",
+        logLevel: "critical",
+        endpoint: "video_prod",
+        appEnvName: "prod",
+        drmEnabled: true,
+        cwvVerbose: true,
+        cwvEnabled: true
+    };
+
+    localStorage.setItem(
+        "helix-library-settings",
+        JSON.stringify(helixSetting)
+    );
+</script>
+
+<!--prehiding snippet for Adobe Target with asynchronous Launch deployment-->
+<script>(function (g, b, d, f) {
+    (function (a, c, d) {
+        if (a) {
+            var e = b.createElement("style");
+            e.id = c;
+            e.innerHTML = d;
+            a.appendChild(e)
+        }
+    })(b.getElementsByTagName("head")[0], "at-body-style", d);
+    setTimeout(function () {
+        var a = b.getElementsByTagName("head")[0];
+        if (a) {
+            var c = b.getElementById("at-body-style");
+            c && a.removeChild(c)
+        }
+    }, f)
+})(window, document, "body {opacity: 0 !important}", 3E3);
+</script>
+<!--/prehiding snippet for Adobe Target with asynchronous Launch deployment-->
+<script>
+    // NEWS-7559 - Add WebSite schema for default home pages on spectrumnews1, spectrumlocalnews, baynews9, ny1, mynews13, spectruminfocus
+     (function(){
+        const regionalHomepageRegEx = /^\/[^\/]+\/[^\/]+[a-zA-Z0-9]$/;
+        const isRegionalHomepage = regionalHomepageRegEx.test(location.pathname);
+        let siteInfo;
+        if (location.pathname === '/splash') {
+            let newCanonical;
+            if (location.hostname.includes('spectrumnews1.com')) {
+                siteInfo = {name: 'Spectrum News 1', url: 'https://spectrumnews1.com'}
+            } else if (location.hostname.includes('spectrumlocalnews.com')) {
+                siteInfo = {name: 'Spectrum News', url: 'https://spectrumlocalnews.com'}
+            } else if (location.hostname.includes('spectrumnoticias.com')) {
+                siteInfo = {name: 'Spectrum Noticias', url: 'https://spectrumnoticias.com'}
+                document.addEventListener('DOMContentLoaded', function() {
+                    // NEWS-8611 - Point to root of domain as /splash page canonical
+                    document.querySelector('link[rel="canonical"]')?.setAttribute('href', siteInfo.url);
+                    document.querySelector('meta[name="description"]')?.setAttribute('content', "Spectrum Noticias es el único canal de noticias en español las 24 horas del día, en todo el país.");
+                });
+            }
+            
+
+        } else if (isRegionalHomepage) {
+            // add schema only if page is the default home page for the domain 
+            if (location.hostname.includes('baynews9.com') && location.pathname === '/fl/tampa') {
+                siteInfo = {name: 'Spectrum Bay News 9', url: 'https://baynews9.com'}
+            } else if (location.hostname.includes('ny1.com') && location.pathname === '/nyc/all-boroughs') {
+                siteInfo = {name: 'Spectrum News NY1', url: 'https://ny1.com' }
+            } else if (location.hostname.includes('mynews13.com') && location.pathname === '/fl/orlando') {
+                siteInfo = {name: 'Spectrum News 13', url: 'https://mynews13.com'}
+            } else if (location.hostname.includes('spectruminfocus.com') && location.pathname === '/section/in-focus') {
+                siteInfo = {name: 'Spectrum News In Focus', url: 'https://spectruminfocus.com'}
+            } else if (location.hostname.includes('spectrumnoticias.com') && location.pathname === '/us/noticias') {
+                siteInfo = {name: 'Spectrum Noticias', url: 'https://spectrumnoticias.com'}
+            } else if (location.hostname.includes('spectrumlocalnews.com') && location.pathname === '/us/snplus') {
+                siteInfo = {name: 'Spectrum News', url: 'https://spectrumlocalnews.com'}
+            }
+        }
+        if (!siteInfo) return;
+        let structuredDataText = '{"@context": "https://schema.org", "name": "' + siteInfo.name +'", "alternateName": "' + siteInfo.name + '", "url": "' + siteInfo.url + '","@type": "WebSite"}';
+        const script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        script.textContent = structuredDataText;
+        document.head.appendChild(script);
+
+        // Update document.title and add a meta tag for og:site_name
+        document.title = siteInfo.name;
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:site_name');
+        meta.setAttribute('content', siteInfo.name);
+        document.head.appendChild(meta)
+     })();
+
+     (function(){
+        // Fire pageview event when userStatus has been resolved
+        window.addEventListener('userStatus', function() {
+            if (!window.helixPageViewFiredOnce){
+                News.App.QuantumAnalytics.trackHelixPageviewEvents(window.digitalData);
+                window.helixPageViewFiredOnce = true;
+            }
+        });
+
+        // Set quantum visitId when the Helix library fires the event indicating it has been set
+        document.addEventListener('quantumVisitIdSet', function() {
+            window.digitalData.visit.visitId = window.Helix.get("visitId");
+            window.digitalData.visit.uuid = localStorage.getItem('deviceUUID') || "";
+            window.digitalData.visit.appVersion = appReleaseVersion;
+            helixSetting.appIdentifier = window.digitalData.page.domain;
+            helixSetting.deviceUuid = window.digitalData.visit.uuid;
+            helixSetting.referrerAppVisitId = window.digitalData.visit.visitId;
+         })
+     })();
+</script>
+
+
+<script>
+    window.addEventListener("beforeunload", function (e) {
+        var auth = Cookies.get('authenticated')
+        if (typeof News !== 'undefined' && auth && auth === "true") {
+            News.App.QuantumAnalytics.setQuantumLoginResumeCookie();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<script src="//assets.adobedtm.com/c19d5759b404/bd5aea4c4170/launch-ccc23cfc1556.min.js" async></script>
+
+
+    
+<script>CQURLInfo={"requestPath":"/content/news/mo/kansas-city","extension":"html","selectors":[],"systemId":"842bdb46-528f-4536-b372-c46cab0cd50c","runModes":"prod,s7connect,crx3,production,nosamplecontent,publish,aem65,crx3tar"};</script>
+<script src="/etc/clientlibs/news/vendor/jquery-3-6-1.min.ACSHASH88b7ada45d73ce1600d55453fc301b3d.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/etc/designs/news/clientlibs/css/images/favicon-latest/favicon.svg"/>
+<link rel="alternate icon" type="image/vnd.microsoft.icon" href="https://images.spectrumnews1.com/is/image/TWCNews/news-favicon"/>
+<!-- IMA HTML5 SDK (for serving Client Side ads): -->
+<script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js" defer></script>
+ <!-- Loads Helix Library -->
+  
+      <script async="true" src='https://cdn.pi.spectrum.net/tools/video/HelixVideo4.40.0.js' charset="UTF-8" type="application/javascript" onload="window.setCwvConfigInterval = setInterval(() => {
+            if (window.Helix.set) {
+                window.Helix.set(`cwvVerbose`, true);
+                window.Helix.set(`cwvEnabled`, true);
+                clearInterval(window.setCwvConfigInterval)
+            }
+       }, 100)"></script>
+  
+   <!--  END Helix -->
+
+
+
+
+    <meta name="robots" content="index, follow"/>
+
+
+
+
+
+
+    <link rel="canonical" href="https://spectrumlocalnews.com/mo/kansas-city"/>
+
+
+<script>
+    let dfpSiteId = "";
+</script>
+
+
+
+
+
+<!-- Load empire CSS library -->
+
+    
+<script>CQURLInfo={"requestPath":"/content/news/mo/kansas-city","extension":"html","selectors":[],"systemId":"842bdb46-528f-4536-b372-c46cab0cd50c","runModes":"prod,s7connect,crx3,production,nosamplecontent,publish,aem65,crx3tar"};</script>
+<link rel="stylesheet" href="/etc/designs/bootstrap-css/clientlibs/news-empire.min.ACSHASH77c1f212aaf30ed5ecc0b94771d39265.css" type="text/css">
+<link rel="stylesheet" href="/etc/designs/news-empire/clientlibs/css.min.ACSHASH64ab9b49992b3fcfa9547b1c6ebd484c.css" type="text/css">
+
+
+
+
+
+<!-- Icons clientlibs must follow main clientlibs -->
+
+
+
+<!-- Load empire icons library -->
+
+    
+<link rel="stylesheet" href="/etc/designs/news/clientlibs/icons.min.ACSHASHeae03a4f281c6f1198f38a7f3aaa4f63.css" type="text/css">
+<link rel="stylesheet" href="/etc/designs/news-empire/clientlibs/icons.min.ACSHASH1302c9e8b5789f5611f678ecee14ed0d.css" type="text/css">
+
+
+
+
+
+
+
+
+
+    
+<script src="/etc/designs/news/clientlibs/js/head-scripts.min.ACSHASH38103575e4264967e44b98314682cdbc.js"></script>
+<script src="/etc/designs/news/clientlibs/js/ads.min.ACSHASHb21b82ad3b35139f992e66b9c4204b51.js"></script>
+<script src="/etc/clientlibs/news/vendor/simple-namespace-0-2-1.min.ACSHASH07f4ab70fa2c1e52b28c6ee763ff5a1f.js"></script>
+
+
+
+
+
+
+<!-- This code handles smartlink redirect logic to navigate user based on device -->
+<script type="text/javascript">
+    var smartRedirectLocations = {};
+
+        smartRedirectLocations.desktopLocation="",
+        smartRedirectLocations.iOSOutsideAppLocation="",
+        smartRedirectLocations.androidOutsideAppLocation="",
+        smartRedirectLocations.inAppLocation=""
+
+</script>
+
+    
+<script src="/etc/designs/news/clientlibs/js/smart-redirect.min.ACSHASH56dbcd932f4b442cbf01a8f74e63f5c8.js"></script>
+
+
+
+
+
+
+<!-- Adding critical css used by components above the fold for optimizing the Core Web Vitals-->
+<style type="text/css">
+    .image img{width: 100%;}
+    .aspect-ratio-container::before {content: ""; width: 1px; margin-left: -1px; float: left; height: 0; padding-bottom: 56.25%;}
+    .aspect-ratio-container::after {content: "";display: table;clear: both;}/* to clear float */
+    .aspect-ratio-container img {max-width: 100%;width: 100%; /* scale with content width */height: auto; /* compute a height that preserves the aspect ratio */}
+    .gallery-slide .img-responsive{width: auto;height: auto;}
+    .site-header header:not([data-ad-enable="true"]) .article-header .articleAdWrapper, .site-header .site-header-inner:not([data-ad-enable="true"]) .article-header .articleAdWrapper{display:none;}
+    .dfp-ad-tags-wrapper[data-position="x30"]{width:100%; min-height:107px;}
+    .dfp-ad-tags-wrapper > .dfp-ad-tags{ min-height:calc(100% - 17px);}
+    .articleAdWrapper{width:340px; min-height:290px}
+    .icon-advertisement {height: 5px; margin: 2px auto 10px;}
+    @media (max-width: 767px){
+        .dfp-ad-tags-wrapper[data-position="x30"]{min-height: 70px; }
+        .dfp-ad-tags[data-hidemobilead="true"],.dfp-ad-tags[data-hidemobilead="true"] + .icon-advertisement, .dfp-ad-tags-wrapper[data-hidemobilead="true"] {display: none}
+    }
+    .widemode #wxHourlyWeather { min-height: 120px;}
+    .content-list-layout--hero .article__details { min-height: 75px;}
+    @media (min-width: 768px) {
+        .widemode #wxHourlyWeather { min-height: 80px;}
+        .content-list-layout--hero .article__details { min-height: 150px;}
+    }
+    .linear-stream-promo, .mini-live-player .mini-player.unauthenticated { min-height: 160px;}
+    .wxAlertBar { display: none; }
+    .sf_mobile { min-height: 65px; }
+    .content-list-layout--1x1:not([data-limit="0"]):not(.content-list__mode--) .articles-container:not(.content-list__hide-image--true) { min-height: 270px;}
+    .content-list-layout--4x1-single-column-mobile:not([data-limit="0"]):not(.content-list__mode--) { min-height: 150px;}
+    .wx-current-weekly-combo { min-height: 590px;}
+    .wx-sunrise-sunset { min-height: 300px;}
+    @media (max-width: 767px) {
+	    .wx-current-weekly-combo { min-height: 835px;}
+    }
+</style>
+
+
+
+</head>
+<body class="has-fixed-navbar design--empire" data-stationcode="SpecNewsMO" data-timezone-offset="-21600000" data-statename="MO" data-ravenid="663bd33760459b001ec346c8" data-requestid="SPECTRUMNEWS" data-mediaanalyticsapi="https://twctsg.hb-api.omtrdc.net" data-softwarestatement="eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxZjYyNmUxOS0xZDhlLTRlODgtOTAxMi02NzY2YzUyZTNiYTciLCJuYmYiOjE2NTI3MjMzNTQsImlzcyI6ImF1dGguYWRvYmUuY29tIiwiaWF0IjoxNjUyNzIzMzU0fQ.Ob_grAySSYrMM-zuiW_4pLXFB30E73IHRxqn1I3ClioDngQ--PZtT5jGlJDklizczh3H0Y4CparDhnhbKgxoUCIZ4t9qipPVvz1kiUGxOt4EBEmBikEvBJFVQjXyF_NsAQEUM_2B6Af3JqSN5CUCvGZVHLRS0rG2zjyI90wlMY93occ02buK54rwcH0eftGsbbXCxoa7QAbGUFv9EWkXr5jpZYds5aPJ5Kbpy8Cyn_VvZCDQh7tLMvFXddHvhOKARPOrvTNfnj-13akz6ZS2UnXuYhF8SCuF4fbxDoemicKYyRvIlmcjzV-QwM8CRgTnfVr4mYleB5oqtRtKdam9Cg" data-adobe-endpoint="https://sp.auth.adobe.com" data-pinxtendpoint="https://apis.spectrum.net" data-userprofileapi="https://apis.spectrum.net/userprofsvc/userprofileservice/subgraphs/query" data-userprofileswitch="true" data-ipvs-v5-switch="true" data-ravenapi="https://content.raven.news" data-hdcpenabler="true" data-onplantapi="https://apis.spectrum.net/id/services/v1/on-plant"><span id="analyticsDataLayer" data-content-type="full-width-page" data-hhid="" data-is-internal="false" data-is-authenticated="false" data-language="English" data-page-category="news" data-publication-date="0" data-region="Kansas City" data-tags="regions:mo/kansas-city"></span>
+
+
+<div>
+
+
+
+
+    
+        
+        
+        <div class="site-header">
+
+
+<header class="header-ele" data-ad-preroll-disable="true">
+    <div class="header_logo">
+        <a href="/mo/kansas-city" class="header_logo__icon icon-SpectrumLogo"></a>
+    </div>
+    <div class="navbar-default">
+        <div class="header_weather">
+            <a class="wx-icon" href="/mo/kansas-city/weather"></a>
+            <a class="tempF" href="/mo/kansas-city/weather"></a>
+        </div>
+        <button type="button" class="navbar-toggle collapsed open-menu" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="close"></span>
+        </button>
+    </div>
+    <div class="header_region-time-weather">
+        
+<span class="header_region">
+    <a href="/splash.html#mo">Kansas City</a>
+</span>
+        <span class="header_date"></span>
+<span class="header_time"></span>
+        <div>
+            <div class="header_weather">
+                <a class="wx-icon" href="/mo/kansas-city/weather"></a>
+                <a class="tempF" href="/mo/kansas-city/weather"></a>
+                <a class="city" href="/mo/kansas-city/weather"></a>
+                <a class="edit" href="javascript:void(0)">EDIT</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="header_social-media-login__wrapper">
+
+        <div class="header_login-watch">
+            <a id="header-watch-live" data-watch-live-url="/content/news/mo/kansas-city/live-video/watch_spectrum_news_live.html" data-watch-live-label="WATCH LIVE" class="btn header_watch hidden-xs" href="/mo/kansas-city/live-video/watch_spectrum_news_live.html">
+                WATCH LIVE
+            </a>
+            
+            <nav class="empire-nav-wrapper">
+                <ul class="empire-nav-item-list header-profile-icon">
+                    <li class="profile-icon-separator" style="font-size:16px;line-height:normal;padding: 14px 0;">|</li>
+                    <li class="recent-activity-list">
+                        <a data-root=".empire-nav" href="#" class="profile-icon-container">
+                        <img class="profile-icon" alt="profile icon" src="/etc/designs/news/clientlibs/css/images/ki-accountSignOut-icon.png" style="width:32px;height:32px;flex-grow:0;object-fit:contain;"/></a>
+                        <div class="empire-link-list list parbase ">
+                            <ul class="recent-activity-dropdown">
+                                <li>
+                                    <a href="/mo/kansas-city/recent-activity" class="recent-activity-list-span recent-activity-path">Recent Activity</a>
+                                    <span class="menu-item-divider"></span>
+                                </li>
+                                <li>
+                                    <a id="logout-button" data-logout-text="Log Out" data-login-text="Log In" href="#" class="recent-activity-list-span">Log Out</a>
+                                    <span class="menu-item-divider"></span>
+                                </li>
+                            </ul>
+                            <ul class="sign-in-dropdown">
+                                <li>
+                                    <a href="/mo/kansas-city/recent-activity" class="recent-activity-list-span recent-activity-signed-out">Recent Activity</a>
+                                    <span class="menu-item-divider"></span>
+                                </li>
+                                <li>
+                                    <a id="login-button" class="sign-in-list-span" href="/mo/kansas-city/live-video/login" data-login-text="Log In" data-logout-text="Log Out">Log In</a>
+                                    <span class="menu-item-divider"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="searchNav">
+        
+            <input name="search" placeholder="Search" type="text" class="empire-header-search icon-search-gray empire-header-search-field" data-url="/content/news/mo/kansas-city/search"/>
+        
+        <nav class="empire-nav-wrapper">
+            
+    
+    <ul class="empire-nav-item-list">
+        <li>
+           
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-94a6f2b9-7e3e-fe78-e9d0-703066ef2080" href="#">
+            Latest News
+        </a>
+        
+    
+
+            
+                <div id="site-header-megamenu-94a6f2b9-7e3e-fe78-e9d0-703066ef2080">
+                        
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/news/us-world-news">
+            U.S. &amp; World News
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/news/missouri-coverage">
+            Kansas City News
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                </div>
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-0e44d921-f16e-e9fd-5efe-4a08e3c408e8" href="#">
+            Weather
+        </a>
+        
+    
+
+            
+                <div id="site-header-megamenu-0e44d921-f16e-e9fd-5efe-4a08e3c408e8">
+                        
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather">
+            Today's Forecast
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/7-day-forecast">
+            7 Day Forecast
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/interactive-radar">
+            Interactive Radar
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/weather-blogs">
+            Weather Blog
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/watches-warnings">
+            Watches and Warnings
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/travel-flight-delays">
+            Flight Status
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/traffic-inbox">
+            Traffic Conditions
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                </div>
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-cb8ddf80-7c97-bf86-a651-d3f721b50e60" href="#">
+            Politics
+        </a>
+        
+    
+
+            
+                <div id="site-header-megamenu-cb8ddf80-7c97-bf86-a651-d3f721b50e60">
+                        
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/politics">
+            Political News
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/politics/washington-dc-bureau">
+            Washington, D.C. Bureau
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/section/in-focus/regions/mo">
+            In Focus
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                </div>
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a href="/mo/kansas-city/health">
+            Health
+        </a>
+        
+    
+
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a href="/mo/kansas-city/human-interest">
+            Human Interest
+        </a>
+        
+    
+
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a href="/mo/kansas-city/show-business">
+            Arts and Entertainment
+        </a>
+        
+    
+
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-2790ef7e-595b-a4cc-a123-be4a5d9d5c0a" href="#">
+            Shows
+        </a>
+        
+    
+
+            
+                <div id="site-header-megamenu-2790ef7e-595b-a4cc-a123-be4a5d9d5c0a">
+                        
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/shows/spectrum-news-challenge">
+            SN Challenge
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                </div>
+            
+        </li>
+    
+        <li>
+           
+    
+    
+        <a href="https://spectrumlocalnews.com/mo/kansas-city/about/bios">
+            Our Journalists
+        </a>
+        
+    
+
+            
+        </li>
+    </ul>
+    
+<div class="empire-full-mobile-menu">
+        
+                <input name="search" placeholder="Search" type="text" class="icon-search-gray mobile-search empire-header-search-field" data-url="/content/news/mo/kansas-city/search"/>
+        
+        <ul class="empire-mobile-item-list mobile-recent-activity-dropdown">
+             <li><a id="empire-watch-live_loggedIn" class="empire-watch-live" href="#"></a>
+             <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+            </li>
+            <li>
+                <a href="#" data-root=".empire-nav" class="my-account">ACCOUNT</a>
+                <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+                <div class="empire-link-list list parbase">
+                    <ul style="flex-direction: column;">
+                        <li>
+                            <a id="sign-out-btn" class="sing-out-mobile sign-in-label" href="#">Log Out</a>
+                            <span class="menu-item-divider"></span>
+                        </li>
+                        <li style="padding: 0;" class="signed-in-recent-activity">
+                            <a href="" class="recent-activity-mobile">Recent Activity</a>
+                            <span class="menu-item-divider"></span>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+            </li>
+
+        </ul>
+        <ul class="empire-mobile-item-list mobile-sign-in-dropdown">
+            <li><a id="empire-watch-live_loggedOut" class="empire-watch-live" href="#"></a>
+             <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+            </li>
+            <li>
+                <a href="#" data-root=".empire-nav" class="my-account">ACCOUNT</a>
+                <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+                <div class="empire-link-list list parbase">
+                    <ul style="flex-direction: column;">
+                        <li>
+                            <a id="sign-in-btn" class="sign-in-mobile sign-in-label" href="">Log In</a>
+                            <span class="menu-item-divider"></span>
+                        </li>
+                        <li style="padding: 0;" class="sign-out-recent-activity">
+                            <a href="" class="recent-activity-mobile">Recent Activity</a>
+                            <span class="menu-item-divider"></span>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+            </li>
+
+        </ul>
+        <ul class="empire-mobile-item-list">
+        
+            <li>
+                
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-94a6f2b9-7e3e-fe78-e9d0-703066ef2080" href="#">
+            Latest News
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+                    
+                        <div id="mobile-site-header-megamenu-94a6f2b9-7e3e-fe78-e9d0-703066ef2080">
+                                
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/news/us-world-news">
+            U.S. &amp; World News
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/news/missouri-coverage">
+            Kansas City News
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                        </div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-0e44d921-f16e-e9fd-5efe-4a08e3c408e8" href="#">
+            Weather
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+                    
+                        <div id="mobile-site-header-megamenu-0e44d921-f16e-e9fd-5efe-4a08e3c408e8">
+                                
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather">
+            Today's Forecast
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/7-day-forecast">
+            7 Day Forecast
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/interactive-radar">
+            Interactive Radar
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/weather-blogs">
+            Weather Blog
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/watches-warnings">
+            Watches and Warnings
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/travel-flight-delays">
+            Flight Status
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/weather/traffic-inbox">
+            Traffic Conditions
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                        </div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-cb8ddf80-7c97-bf86-a651-d3f721b50e60" href="#">
+            Politics
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+                    
+                        <div id="mobile-site-header-megamenu-cb8ddf80-7c97-bf86-a651-d3f721b50e60">
+                                
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/politics">
+            Political News
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/politics/washington-dc-bureau">
+            Washington, D.C. Bureau
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+
+    <li>
+        
+    
+    
+        <a href="/section/in-focus/regions/mo">
+            In Focus
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                        </div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a href="/mo/kansas-city/health">
+            Health
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-clickthrough-bar"></div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a href="/mo/kansas-city/human-interest">
+            Human Interest
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-clickthrough-bar"></div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a href="/mo/kansas-city/show-business">
+            Arts and Entertainment
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-clickthrough-bar"></div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a data-root=".empire-nav" data-target="#site-header-megamenu-2790ef7e-595b-a4cc-a123-be4a5d9d5c0a" href="#">
+            Shows
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-megamenu-bar"></div>
+                    
+                        <div id="mobile-site-header-megamenu-2790ef7e-595b-a4cc-a123-be4a5d9d5c0a">
+                                
+
+
+
+
+    
+    
+    <div class="empire-link-list list parbase">
+
+<ul>
+    <li>
+        
+    
+    
+        <a href="/mo/kansas-city/shows/spectrum-news-challenge">
+            SN Challenge
+        </a>
+        
+    
+
+        <span class="menu-item-divider"></span>
+    </li>
+</ul>
+
+
+</div>
+
+
+
+                        </div>
+                    
+            </li>
+        
+        
+            <li>
+                
+    
+    
+        <a href="https://spectrumlocalnews.com/mo/kansas-city/about/bios">
+            Our Journalists
+        </a>
+        
+    
+
+                    <div class="empire-mobile-divider empire-type-clickthrough-bar"></div>
+                    
+            </li>
+        </ul>
+</div>
+
+<!-- Getting the value from site-header.html to empire-nav.html -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerLink = document.querySelector('#header-watch-live');
+        const loggedInNavLink = document.querySelector('#empire-watch-live_loggedIn');
+        const loggedOutNavLink = document.querySelector('#empire-watch-live_loggedOut');
+
+        if (headerLink) {
+            const url = headerLink.dataset.watchLiveUrl?.trim();
+            const label = headerLink.dataset.watchLiveLabel?.trim();
+
+            // If either url or label is missing or empty hide parent <li> elements
+            if (!url || !label) {
+                [loggedInNavLink, loggedOutNavLink].forEach(link => {
+                    if (link && link.closest('li')) {
+                        link.closest('li').style.display = 'none';
+                    }
+                });
+                return; // stop further execution
+            }
+
+            // Otherwise populate the links normally
+            [loggedInNavLink, loggedOutNavLink].forEach(link => {
+                if (link) {
+                    link.href = url;
+                    link.textContent = label;
+                    link.hidden = false;
+                }
+            });
+        } else {
+            // If no #header-watch-live found, also hide both <li>
+            [loggedInNavLink, loggedOutNavLink].forEach(link => {
+                if (link && link.closest('li')) {
+                    link.closest('li').style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+
+
+
+
+        </nav>
+    </div>
+    <div id="edit-location-modal" class="location-modal">
+        <div class="modal-content">
+            <span class="edit-location-modal-close">&times;</span>
+            <span class="modal-title-text">Set Weather Location</span>
+            <p class="modal-desc-text">Get hyperlocal forecasts, radar and weather alerts.</p>
+            <input id="edit-location-zip" name="zip" type="text" maxlength="5" placeholder="Enter a 5-digit ZIP code" pattern="[0-9]+"/>
+            <p class="zip-error-message">Please enter a valid zipcode.</p>
+            <div class="edit-location-save">
+                <p class="save-button-text">Save</p>
+            </div>
+        </div>
+    </div>
+    
+<!-- regionalization modal -->
+ 
+    <div class="ip-regionalization-modal" style="display:none">
+        <div class="ip-regional">
+            <img alt="close" aria-label="close" role='button' src="/etc/designs/news/clientlibs/css/images/ki-x-alt.png" class="ip-modal-close"/>
+            <div class="ip-regional-modal-content">
+                
+                    <span class="ip-modal-heading">Confirm Your Location</span> 
+                
+                
+               
+                <span class="ip-modal-text">We automatically picked a Spectrum News market that we believe is most relevant to you.</span>
+                <img alt="region image" src="https://images.spectrumnews1.com/is/image/SpectrumNews/newsLocationsSourceKansasCity?fmt=png-alpha" class="region-img"/>
+                <span class="ip-location">Kansas City</span>
+                
+                    <div class="ip-location-info info-block1">
+                        <img alt="check" src="/etc/designs/news/clientlibs/css/images/ki-checkmark-circle-f.png" class="check-icon"/>
+                        <span class="info1" data-browser-lang-translation="News and information that matter to your community" data-other-lang-translation="">News and information that matter to your community</span>
+                    </div>
+                
+                    <div class="ip-location-info info-block1">
+                        <img alt="check" src="/etc/designs/news/clientlibs/css/images/ki-checkmark-circle-f.png" class="check-icon"/>
+                        <span class="info1" data-browser-lang-translation="Local weather forecasts" data-other-lang-translation="">Local weather forecasts</span>
+                    </div>
+                
+                
+                
+                    <button class="confirm-button-container"><span class="confirm-text">Confirm</span></button>
+                    <a href="" class="change-button-container"><span class="button-text">Change Location</span></a>
+                    <span class="info-footer">You can change your news source and language at any time.</span>
+                
+                
+               
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--source selector modal-->
+
+    <div class="ip-regionalization-modal source-selector-modal" style="display:none" data-domain-logo="https://images.spectrumnews1.com/is/image/SpectrumNews/logo-spectrum-news-lm-v2?fmt=png-alpha">
+        <div class="ip-regional">
+            <img alt="close" aria-label="close" role='button' src="/etc/designs/news/clientlibs/css/images/ki-x-alt.png" class="source-selector-modal-close"/>
+            <div class="ip-regional-modal-content">
+                
+                
+                    <span class="ip-modal-heading">Choose News Source &amp; Language</span>
+                
+                
+                <span class="ip-modal-text">Select your news source and language for Spectrum News.</span>
+             <div class="language-selector" role="radiogroup">
+             </div>
+             
+                <div class="ip-location-info">
+                    <img alt="check" src="/etc/designs/news/clientlibs/css/images/ki-checkmark-circle-f.png" class="check-icon-info"/>
+                    <span class="info1 feature-info" data-browser-lang-translation="Local news coverage, weather forecasts, and developing stories impacting the Kansas City community." data-other-lang-translation="">Local news coverage, weather forecasts, and developing stories impacting the Kansas City community.</span>
+                </div>
+            
+                
+                    <a class="selector-continue-button"><span class="confirm-text">Continue</span></a>
+                    <span class="info-footer">You can change your news source and language at any time.</span>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- show  ip-modal if source-selector-switch is on -->
+
+    <!--regionalisation user notification popup-->
+    <div class="notification-popup" style="display:none">
+        <div class="pointer"></div>
+        <div class="notification-container">
+            <div class="description-container">
+                <span class="notification-title">Change Location</span>
+                <span class="notification-description">You can change your news source or language here at any time</span>
+            </div>
+            <img tabindex="0" role="button" aria-label="close" alt="close" class="ip-notification-close" src="/etc/designs/news/clientlibs/css/images/ki-x.png"/>
+        </div>
+       
+    </div>
+
+ <!--returning user EN  popup-->
+    
+
+<!--returning user ES  popup-->
+    
+
+</header>
+<div class="region-data" data-ravenid="663bd33760459b001ec346c8" data-organization-name="Spectrum News Kansas City" data-outoffreeviews="Stay connected to your community. Log in for unlimited access to Spectrum News content." data-numofviews="5" data-softwallwelcome="Enjoy access to five videos from Spectrum. Log in for unlimited access." data-softwallplaybutton="ASK LATER" data-softwallloginbutton="SIGN IN" data-videowelcome="Videos Left Until Sign-In Required" data-videologinbutton="SIGN IN" data-paywallmessage="This video is available exclusively to our customers" data-paywallloginbutton="SIGN IN" data-paywalllearnmore="LEARN MORE">
+</div>
+</div>
+
+    
+        
+        
+        <div class="wxAlertBar">
+<div class="alert-bar">
+    <div class="alert-bar__displayed-alerts">
+        
+
+        
+    </div>
+</div>
+
+<div>
+    <div class="alert-bar__raven-alerts">
+        
+    
+
+        
+    
+
+    </div>
+</div>
+
+<script>
+    ns("News.App").tickerConfig = {
+        effect : "slideUp",
+        interval : 4000,
+        duration : 600
+    }
+</script>
+
+    
+<script src="/etc/designs/news/clientlibs/js/weather/alertBar.min.ACSHASH6b8cdd84145071930d987c4519b12dcd.js"></script>
+
+
+</div>
+
+    
+
+</div>
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+
+</div>
+
+    
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container contentWrapper widemode">
+    <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12">
+
+
+
+
+    
+    
+    <div class="reference">
+</div>
+
+
+    
+    
+    <div class="reference">
+</div>
+
+
+</div>
+</div></div>
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    
+
+    
+    
+    <div class="reference"><div class="cq-dd-paragraph">
+                
+                <div class="web-reference-page page basicpage">
+
+
+
+<!-- In the author mode it involkes the script and styles from the corresponing template. 
+    But in Publisher view this will not render and all the executions will inherit from the parent page -->
+    
+
+
+
+
+
+
+
+
+
+<div class="container contentWrapper web-reference-comp widemode">
+    <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+    
+    
+    <div class="content-list hero componentWrapper">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--hero  ajax--true content-list__mode--tag-based-manual " data-limit="1" data-optionaltags="regions:mo/kansas-city,regions:mo/missouri,regions:mo/st-louis" data-excludedtags="pageCategories:spectrum-news-in-90" data-dayslimitTimezone="-6" data-pagePath="/content/news/mo/kansas-city" data-path="|content|news|web-reference-templates|mo|kansascitytopstories|jcr:content|main-content-area|hero" data-resourcePath="/content/news/web-reference-templates/mo/kansascitytopstories/jcr:content/main-content-area/hero" data-mode="tag-based-manual" data-showinlinevideo="true" data-heroid="Kansas City Local Hero" data-contentListLayoutType="hero">
+          
+
+          <h1></h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false content-list__show-video--true">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+    </div>
+</div>
+<input type="hidden" class="pageProperties" data-template="/apps/news/templates/full-width-page"/>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--4x1-single-column-mobile  ajax--true content-list__mode--inherited-from-hero " data-limit="4" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-path="|content|news|mo|kansas-city|jcr:content|main-content-area|columns|column1|columns|column0|content_list_1803025569" data-heroselector="/content/news/web-reference-templates/mo/kansascitytopstories/jcr:content/main-content-area/hero" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/columns/column1/columns/column0/content_list_1803025569" data-mode="inherited-from-hero" data-contentListLayoutType="4x1-single-column-mobile">
+          
+
+          <h1></h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="mini-live-player">
+
+<div>
+    
+        <div class="live-tv live-stream-promo--container mini-player unauthenticated" data-cfPath="/content/dam/News/content-fragments/live/kansas-city" data-root-path="/content/news/mo/kansas-city" data-tmsid="66927">
+
+        <div class="live-badge show-when-authenticated" style="display: none;">
+            <div class="live-badge-text">LIVE</div>
+        </div>
+        <h2 class="heading-title">Watch Spectrum News</h2>
+        <div id="html5-player" class="live-player-container show-when-authenticated" data-defaultchannel="/content/dam/News/content-fragments/live/kansas-city" data-concurrencyenabled="true" data-cftemppassenabled="true" data-widevine="https://apis-drm.spectrum.net/drm/licenseServer/widevine/v2" data-playready="https://apis-drm.spectrum.net/drm/licenseServer/playready/v2" data-resourceid="SPECTRUMNEWS" data-retrylimit="1" data-fairplayCertUrl="https://apis-drm.spectrum.net/drm/licenseServer/getcertificate/v2?applicationId=charter" data-fairplayla="https://apis-drm.spectrum.net/drm/licenseServer/getckc/v2" data-ipvsapi="https://apis-vid.spectrum.net/ipvs/api/adp/v5/streams" data-dashcsid="stvn_ovp_pc_live" data-fpcsid="stvn_ovp_pc_live" data-enabledai="true" data-tmsid="66927" data-ncsid="8052" data-ravenapi="https://content.raven.news/epgs/v1/on-now-up-next?ids=">
+            <img src="https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm" class="thumbnail" alt="" style="width: 100%; height: 100%; object-fit: cover;"/>
+            <div class="mini-player-controls">
+                <button type="button" class="mute" aria-label="Unmute">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16" fill="black" fill-opacity="0.75"/>
+                        <path d="M7.63 7.63002C7.24 8.02002 7.24 8.65002 7.63 9.04002L11.29 12.7L11 13H8C7.45 13 7 13.45 7 14V18C7 18.55 7.45 19 8 19H11L14.29 22.29C14.92 22.92 16 22.47 16 21.58V17.41L20.18 21.59C19.69 21.96 19.16 22.27 18.58 22.5C18.22 22.65 18 23.03 18 23.42C18 24.14 18.73 24.6 19.39 24.33C20.19 24 20.94 23.56 21.61 23.02L22.95 24.36C23.34 24.75 23.97 24.75 24.36 24.36C24.75 23.97 24.75 23.34 24.36 22.95L9.05 7.63002C8.66 7.24002 8.03 7.24002 7.63 7.63002ZM23 16C23 16.82 22.85 17.61 22.59 18.34L24.12 19.87C24.68 18.7 25 17.39 25 16C25 12.17 22.6 8.89002 19.22 7.60002C18.63 7.37002 18 7.83002 18 8.46002V8.65002C18 9.03002 18.25 9.36002 18.61 9.50002C21.18 10.54 23 13.06 23 16ZM14.29 9.71002L14.12 9.88002L16 11.76V10.41C16 9.52002 14.92 9.08002 14.29 9.71002ZM20.5 16C20.5 14.23 19.48 12.71 18 11.97V13.76L20.48 16.24C20.49 16.16 20.5 16.08 20.5 16Z" fill="white"/>
+                    </svg>
+                </button>
+                <button type="button" class="unmute" aria-label="Mute" style="display: none;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16" fill="black" fill-opacity="0.75"/>
+                        <path d="M7 14.0001V18.0001C7 18.5501 7.45 19.0001 8 19.0001H11L14.29 22.2901C14.92 22.9201 16 22.4701 16 21.5801V10.4101C16 9.52008 14.92 9.07008 14.29 9.70008L11 13.0001H8C7.45 13.0001 7 13.4501 7 14.0001ZM20.5 16.0001C20.5 14.2301 19.48 12.7101 18 11.9701V20.0201C19.48 19.2901 20.5 17.7701 20.5 16.0001ZM18 8.45008V8.65009C18 9.03009 18.25 9.36009 18.6 9.50009C21.18 10.5301 23 13.0601 23 16.0001C23 18.9401 21.18 21.4701 18.6 22.5001C18.24 22.6401 18 22.9701 18 23.3501V23.5501C18 24.1801 18.63 24.6201 19.21 24.4001C22.6 23.1101 25 19.8401 25 16.0001C25 12.1601 22.6 8.89008 19.21 7.60009C18.63 7.37009 18 7.82008 18 8.45008Z" fill="white"/>
+                    </svg>           
+                </button>
+                <button type="button" class="pop-out" aria-label="Launch Standalone Player">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16" fill="black" fill-opacity="0.75"/>
+                        <g clip-path="url(#clip0_2055_7829)">
+                        <path d="M21 21.8333H11C10.5417 21.8333 10.1667 21.4583 10.1667 21V11C10.1667 10.5417 10.5417 10.1667 11 10.1667H15.1667C15.625 10.1667 16 9.79167 16 9.33333C16 8.875 15.625 8.5 15.1667 8.5H10.1667C9.24167 8.5 8.5 9.25 8.5 10.1667V21.8333C8.5 22.75 9.25 23.5 10.1667 23.5H21.8333C22.75 23.5 23.5 22.75 23.5 21.8333V16.8333C23.5 16.375 23.125 16 22.6667 16C22.2083 16 21.8333 16.375 21.8333 16.8333V21C21.8333 21.4583 21.4583 21.8333 21 21.8333ZM17.6667 9.33333C17.6667 9.79167 18.0417 10.1667 18.5 10.1667H20.6583L13.05 17.775C12.725 18.1 12.725 18.625 13.05 18.95C13.375 19.275 13.9 19.275 14.225 18.95L21.8333 11.3417V13.5C21.8333 13.9583 22.2083 14.3333 22.6667 14.3333C23.125 14.3333 23.5 13.9583 23.5 13.5V8.5H18.5C18.0417 8.5 17.6667 8.875 17.6667 9.33333Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_2055_7829">
+                        <rect width="20" height="20" fill="white" transform="translate(6 6)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <video id="live-player" playsinline width="100%"></video>
+            <div class="error-container" style="display: none; font-size: 14px; padding: 0 70px; z-index: 4;">Something went wrong. Please reload the stream.</div>
+        </div>
+        <div class="live-stream-promo--block">
+            <div class="live-stream-left-block">
+                <div class="thumbnail">
+                    <img src="https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm" class="thumbnail" width="167" height="97" alt="" srcset="https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm?wid=320&hei=186&fit=crop 320w, https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm?wid=568&hei=330&fit=crop 568w, https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm?wid=767&hei=446&fit=crop 767w, https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm?wid=1024&hei=595&fit=crop 1024w, https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm?wid=1050&hei=610&fit=crop 1050w, https://images.spectrumnews1.com/is/image/SpectrumNews/kansas-city_warm?wid=1250&hei=1250&fit=crop 1250w" sizes="167px"/>
+                    <div class="play-button"></div>
+                </div>
+            </div>
+            <div class="live-stream-right-block">
+                <div class="live-badge">
+                    <div class="live-badge-text">LIVE</div>
+                </div>
+                
+                <div title="High School Football">
+                    <div class="live-stream--program-name">High School Football</div>
+                </div>
+                <div class="live-stream--program-time"></div>
+            </div>
+        </div>
+        </div>
+    
+
+    
+
+
+
+
+
+
+
+
+</div></div>
+
+
+    
+    
+    <div class="socialfollow-mobile">
+<div class="sf_mobile">
+    <a class="btn sf_mobile_watch" href="/mo/kansas-city/live-video/watch_spectrum_news_live">WATCH LIVE</a>
+    <div class="sf_mobile_social-media">
+        
+            
+                <a href="https://www.facebook.com/SpectrumNewsKC" class="icon--facebook-gray" target="_blank"></a>
+            
+                <a href="https://x.com/SpectrumNewsKC" class="icon--twitter-gray" target="_blank"></a>
+            
+                <a href="https://www.instagram.com/spectrumnewskc/" class="icon--instagram-gray" target="_blank"></a>
+            
+                <a href="https://www.youtube.com/@spectrumlocalnews" class="icon--youtube-gray" target="_blank"></a>
+            
+        
+    </div>
+</div></div>
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--1x1  ajax--true content-list__mode--tag-based-manual " data-limit="1" data-optionaltags="regions:mo/kansas-city" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-path="|content|news|mo|kansas-city|jcr:content|main-content-area|columns|column1|columns|column1|content_list" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/columns/column1/columns/column1/content_list" data-mode="tag-based-manual" data-contentListLayoutType="1x1" data-heading="Traffic in Kansas City">
+          
+
+          <h1>Traffic in Kansas City</h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div></div>
+
+
+</div>
+</div></div>
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+
+
+
+
+    
+    
+    <div class="wx-current-weather"><div id="wxCurrentWeather" class="component-wrapper hidden">
+    <div class="currentInfo">
+        <div class="current-weather-icon"></div>
+        <div class="current-weather-temp"></div>
+        <div class="current-conditions-text"></div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-4">
+
+
+
+
+    
+    
+    <div class="wx-hourly-weather"><div id="wxHourlyWeather" class="component-wrapper hidden">
+    <div class="hourlyInfo">
+        <div class="hourly-weather-hour"></div>
+        <div class="hourly-weather-icon"></div>
+        <div class="hourly-conditions-temp"></div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-4">
+
+
+
+
+    
+    
+    <div class="wx-baronradar"><div class="wxBaronRadarWrapper" id="wxBaronRadar">
+   <div class="baronRadarWrapper">
+	     <div id="radar-desktop" class="baronradardesktop">   
+	        <a href="" target="_blank"><div id="wxthumbnail"><a href="/mo/kansas-city/weather/interactive-radar"><img width="100%" style="margin-top:-15%;" src="https://media.raven.news/oh/weather/CTVRadarKansasCity.png"><a></div></a>
+	     </div>  
+	     <div id="radar-mobile" class="baronradarmobile">   
+	         <a href="" target="_blank"><style>
+.wx-baronradar .baronradarmobile {
+
+}
+</style>
+<a href="/mo/kansas-city/weather/interactive-radar"><img src="https://media.raven.news/oh/weather/CTVRadarKansasCity.png" style="margin-left:-60%;" height="105px"/></a></a>
+	     </div>
+	     <div>      
+            <a>
+            </a>
+         </div>
+	 </div> 
+</div>
+</div>
+
+
+</div>
+</div></div>
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--1x4 view-more ajax--true content-list__mode--inherited-from-hero " data-limit="4" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-path="|content|news|mo|kansas-city|jcr:content|main-content-area|content_list" data-heroselector="/content/news/web-reference-templates/mo/kansascitytopstories/jcr:content/main-content-area/hero" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/content_list" data-mode="inherited-from-hero" data-contentListLayoutType="1x4" data-heading="MORE HEADLINES">
+          
+
+          <h1>MORE HEADLINES</h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+    <div class="view-more">
+        <a class="pull-right view-more-link" href="/mo/kansas-city/news/missouri-coverage">
+            VIEW MORE NEWS
+        </a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    
+    
+    <div class="campaign">
+
+
+        <!-- Fire analytics events for impressions only in publish mode -->
+        
+                
+    
+<script src="/etc/designs/news/clientlibs/js/campaign.min.ACSHASH784cc82296507114679632150850832b.js"></script>
+
+
+
+        
+
+<div class="campaign campaign--container">
+    
+    <div class="campaign__content">
+        <a target="_blank">
+            <picture>
+                
+                
+
+                
+                
+
+                
+                
+
+                
+                
+
+                
+                <img class="campaign__image"/>
+            </picture>
+        </a>
+    </div>
+</div>
+</div>
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8">
+
+
+
+
+    
+    
+    <div class="reference"><div class="cq-dd-paragraph">
+                
+                <div class="web-reference-page page basicpage">
+
+
+
+<!-- In the author mode it involkes the script and styles from the corresponing template. 
+    But in Publisher view this will not render and all the executions will inherit from the parent page -->
+    
+
+
+
+
+
+
+
+
+
+<div class="container contentWrapper web-reference-comp widemode">
+    <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--1x1  ajax--true content-list__mode--tag-based-dynamic " data-limit="1" data-requiredtags="regions:mo/kansas-city,pageCategories:spectrum-news-primary-categories/weather/daily-forecast" data-dayslimitTimezone="-6" data-pagePath="/content/news/mo/kansas-city" data-resourcePath="/content/news/web-reference-templates/mo/sn90-kc/jcr:content/main-content-area/columns/column0/content_list" data-mode="tag-based-dynamic" data-contentListLayoutType="1x1" data-heading="Kansas City Forecast">
+          
+
+          <h1>Kansas City Forecast</h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--1x1  ajax--true content-list__mode--tag-based-dynamic " data-limit="1" data-requiredtags="pageCategories:spectrum-news-in-90,regions:mo/kansas-city" data-dayslimit="1" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-resourcePath="/content/news/web-reference-templates/mo/sn90-kc/jcr:content/main-content-area/columns/column1/content_list" data-mode="tag-based-dynamic" data-showinlinevideo="true" data-contentListLayoutType="1x1" data-heading="Spectrum News in 90">
+          
+
+          <h1>Spectrum News in 90</h1>
+          <div class="articles-container content-list__preview--true content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--true content-list__hide-date--false content-list__show-video--true">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div></div>
+
+
+
+        </div>
+    </div>
+</div>
+<input type="hidden" class="pageProperties" data-template="/apps/news/templates/full-width-page"/>
+
+
+</div>
+</div>
+</div>
+
+
+    
+    
+    <div class="reference">
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-4">
+
+
+
+
+    
+    
+    <div class="promo-link-list list parbase">
+<h1 class="promo__list-header">
+     OUR JOURNALISTS
+</h1>
+
+ 
+
+
+    
+        <div>
+            
+                <img class="img-responsive  " data-src="https://s7d2.scene7.com/is/image/TWCNews/KC_Mosiac_250821" data-sourcetype="scene7" src="https://images.spectrumnews1.com/is/image/SpectrumNews/1x1transparent"/>
+            
+        </div>
+    
+
+
+
+<ul class="list-inline list-unstyled">
+    <li>
+
+    <div class="promo__linklist-line">
+      <div>
+        <a class="promo-list-title" href="/mo/kansas-city/about/bios">
+            Meet Our Journalists  
+        </a>
+      </div>
+      <div>
+        <a class="promo-list-subtitle" href="/mo/kansas-city/about/bios">
+             Get to know the journalists working to bring you stories about your community and beyond.
+        </a>
+
+      </div>
+    </div>
+</li>
+</ul>
+</div>
+
+
+</div>
+</div></div>
+
+
+    
+    
+    <div class="recent-activity">
+
+
+<!-- Unauthenticated CTA-->
+
+<div class="sign-in-cta-preview sign-in-cta-preview-hide">
+    <div id="recent-activity-title-unauth" class="title-container" data-event-type="previewMode">
+        <span class="title">where you left off</span>
+    </div>
+
+    <div class="sign-in-container" data-event-type="previewMode">
+    </div>
+    <div class="recent-activity-view-more recent-activity-view-more-hide">
+        <a href="/product-pages/st-louis/recent-activity"><span class="recent-activity-view-more-span">view more &gt;</span></a>
+    </div>
+</div>
+
+
+<div class="recent-events-container recent-event-container-hide" data-event-type="previewMode">
+    <div class="recent-event-preview">
+        <div id="recent-activity-title" class="recent-activity-title-container recent-activity-title-container-show" data-event-type="previewMode">
+            <span class="title">where you left off</span>
+        </div>
+
+         <!-- Error page -->
+         <div class="recent-activity-error-msg-container hide-error-msg">
+            <div class="error-msg-container">
+            <img alt="warning image" src="/etc/designs/news/clientlibs/widgets/css/warning.png" class="error-img"/>
+            <span class="error-msg">Unable to Load Recent Activity</span>
+            </div>
+            <span class="error-msg msg">You can continue exploring Spectrum News while we fix the problem.</span>
+         </div>
+          <!---->
+
+        <div class="recent-event-container-list" style="margin-right: -25px"> <!-- margin right fix for preview padding issue-->
+            <!-- Ittiration Needed-->
+         </div>
+    <!-- View All Link Starts (Condition needed for home page)-->
+         <div id="view-all" class="recent-event-view-all-container">
+         <a href="/product-pages/st-louis/recent-activity">
+            <span class="view-all-span">View More &gt;</span>
+         </a>
+        </div>
+    <!-- View All Link  Ends-->
+    </div>
+
+</div>
+
+<!-- Recent activity  page-->
+
+
+
+<!-- overlay changes-->
+<div class="recent-activity-popup" id="clear-all-overlay">
+    <div class="clear-overlay">
+
+        <div class="overlay-container  ">
+
+            <div class="overlay-heading">
+                <span class="clear-recent-msg">Clear All Recent Activity </span>
+                <img class="close-btn-img" src="/etc/designs/news/clientlibs/css/images/ki-x-alt.svg" alt="close"/>
+
+            </div>
+            <span class="clear-action-warning">Are you sure you want to clear all recent activity?<br/><br/>
+                This action is irreversible.</span>
+            <div class="btn-container">
+                <a class="cancel-btn">
+                    <span class="cancel-span">Cancel</span>
+                </a>
+                <a class="clear-btn">
+                    <span class="clear-span">Clear  
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- overlay changes-->
+</div>
+
+
+    
+    
+    <div class="reference">
+</div>
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-9">
+
+
+
+
+    
+    
+    <div class="section-header"><div class=" section-header-inner" data-label="U.S and World News">
+    
+        U.S and World News
+    
+</div>
+
+
+</div>
+
+
+    
+    
+    <div class="columns">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="reference"><div class="cq-dd-paragraph">
+                
+                <div class="web-reference-page page basicpage">
+
+
+
+<!-- In the author mode it involkes the script and styles from the corresponing template. 
+    But in Publisher view this will not render and all the executions will inherit from the parent page -->
+    
+
+
+
+
+
+
+
+
+
+<div class="container contentWrapper web-reference-comp widemode">
+    <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+    
+    
+    <div class="content-list hero componentWrapper">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--hero  ajax--true content-list__mode--tag-based-manual " data-limit="1" data-requiredtags="regions:All/all-markets" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-path="|content|news|web-reference-templates|national|national-web-blocks-folder|a-block|jcr:content|main-content-area|hero" data-resourcePath="/content/news/web-reference-templates/national/national-web-blocks-folder/a-block/jcr:content/main-content-area/hero" data-mode="tag-based-manual" data-showinlinevideo="true" data-heroid="A Block" data-contentListLayoutType="hero">
+          
+
+          <h1></h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false content-list__show-video--true">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+    </div>
+</div>
+<input type="hidden" class="pageProperties" data-template="/apps/news/templates/full-width-page"/>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-6">
+
+
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--4x1-single-column-mobile  ajax--true content-list__mode--inherited-from-hero " data-limit="4" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-path="|content|news|mo|kansas-city|jcr:content|main-content-area|columns_489335311|column0|columns|column1|content_list" data-heroselector="/content/news/web-reference-templates/national/national-web-blocks-folder/a-block/jcr:content/main-content-area/hero" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/columns_489335311/column0/columns/column1/content_list" data-mode="inherited-from-hero" data-contentListLayoutType="4x1-single-column-mobile">
+          
+
+          <h1></h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div></div>
+
+
+</div>
+
+    <div class=" col-xs-12 col-sm-3">
+
+
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--4x1-single-column-mobile  ajax--true content-list__mode--tag-based-dynamic " data-limit="4" data-requiredtags="pageCategories:politics/washington-dc-bureau" data-dayslimit="3" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/columns_489335311/column1/content_list" data-mode="tag-based-dynamic" data-contentListLayoutType="4x1-single-column-mobile" data-heading="FROM OUR D.C. BUREAU">
+          
+
+          <h1>FROM OUR D.C. BUREAU</h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div></div>
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--1x4  ajax--true content-list__mode--tag-based-dynamic " data-limit="4" data-requiredtags="pageCategories:spectrum-news-primary-categories/international" data-excludedtags="pageCategories:politics/washington-dc-bureau" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/content_list_1083173261" data-mode="tag-based-dynamic" data-contentListLayoutType="1x4" data-heading="International">
+          
+
+          <h1>International</h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    
+    
+    <div class="content-list">
+
+     
+     
+     
+     <div class="content-list-layout content-list-layout--1x4  ajax--true content-list__mode--tag-based-dynamic " data-limit="4" data-requiredtags="pageCategories:spectrum-news-primary-categories/arts-entertainment" data-optionaltags="pageCategories:spectrum-news-primary-categories/for-your-consideration,regions:mo/kansas-city" data-dayslimitTimezone="-5" data-pagePath="/content/news/mo/kansas-city" data-resourcePath="/content/news/mo/kansas-city/jcr:content/main-content-area/content_list_852734787" data-mode="tag-based-dynamic" data-contentListLayoutType="1x4" data-heading="entertainment">
+          
+
+          <h1>entertainment</h1>
+          <div class="articles-container content-list__preview--false content-list__hide-flair--false content-list__hide-videoIndicator--false content-list__hide-image--false content-list__hide-location--false content-list__hide-date--false ">
+               
+
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    
+    
+    <div class="campaign">
+
+
+        <!-- Fire analytics events for impressions only in publish mode -->
+        
+                
+    
+
+
+
+        
+
+<div class="campaign campaign--container">
+    
+    <div data-campaign-name="Corporate" data-audience-id="National Corp Marketing Campaign" class="campaign__content">
+        <a href="https://www.spectrum.com/mobile?cmp=sspp_specnews_affiliates_smo_090925" target="_blank">
+            <picture>
+                
+                <source media="(min-width: 768px)" srcset="https://s7d2.scene7.com/is/image/TWCNews/2510-Spectrum_Mobile_NewsAffiliate_3000x481"/>
+
+                
+                <source media="(max-width: 767px)" srcset="https://s7d2.scene7.com/is/image/TWCNews/Spectrum_Mobile_NewsAffiliate_900x750"/>
+
+                
+                
+
+                
+                
+
+                
+                <img class="campaign__image" src="https://s7d2.scene7.com/is/image/TWCNews/2510-Spectrum_Mobile_NewsAffiliate_3000x481" alt="corporate campaign"/>
+            </picture>
+        </a>
+    </div>
+</div>
+</div>
+
+
+    
+    
+    <div class="open-in-app"><div class="article-app-prompt">
+    <div class="title-bar">
+        <div class="title-bar-col">
+            <strong class="title">Open in Our App</strong>
+        </div>
+        <div class="title-bar-col">
+            <a href="#" class="continue-link">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADiNXWtAAAA0klEQVRIDe1U2w2DMAxEXaDsUTaDwdsuEc5VkMA6nZ0IvmgkK4p9j8SEDMN/9HSglDK28tIcABfEG/HKmhi2chbJAWisQEzlgwhNDFOxmH4be0Yme4I0ceISezDNEDOYg6hfKAFV8zpyzYRYTopERSJovbaR73mjSZP4IxK/vI7t+mt7XouIuJl5w/BnpF1QQqpGxXyyCnwx26C3Bfn9SQybOwmAE0KKbxsiJtNWozMI9tg1fURnYlz91AMwI3qf65nu3CdhoJ9cT8C6h0Nk7phaAVML8WWIJGM8AAAAAElFTkSuQmCC"/>
+            </a>
+        </div>
+    </div>
+    <div class="prompt-description">
+        <div><p>Get the best experience and stay connected to your community with our Spectrum News app.&nbsp;<a href="https://spectrumlocalnews.com/app">Learn More</a></p>
+</div>
+    </div>
+    <hr/>
+    <div class="buttons">
+        <a class="btn btn-primary app-button" href="https://smart.link/u8bvg4vbk631w?cid=article_prompt">
+            Open in Spectrum News App
+        </a>
+        <p>
+            <a class="continue-link" href="#">Continue in Browser</a>
+        </p>
+    </div>
+</div></div>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+
+</div>
+
+    
+
+
+        </div>
+    </div>
+</div>
+<input type="hidden" class="pageProperties" data-template="/apps/news/templates/full-width-page"/>
+
+<div>
+
+
+
+
+    
+        
+        
+        <div class="site-footer">
+
+<footer class="news-empire">
+    <div class="social-gradient"></div>
+    <div id="footerLinks" class="container main-footer__body">
+        <div class="row">
+            <div class="col-xs-12">
+                
+                    <div class="footer-branding">
+                        <a href="/mo/kansas-city">
+                            <div class="logo icon-SpectrumLogo-black"></div>
+                        </a>
+                    </div>
+                
+                <div class="footer__links text-uppercase ">
+
+<ul class="list-inline list-unstyled">
+    <li>
+    
+    
+        <a href="https://spectrumnews1.com/splash">
+            Spectrum News
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="/mo/kansas-city/about/contact-us">
+            Contact
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://jobs.spectrum.com/content-media-news" target="_blank">
+            Careers
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://www.spectrumreach.com/spectrum-news?utm_source=spectrumnews&utm_medium=tv&utm_content=spectrumnews&utm_campaign=midnorth_spectrumnews_tv" target="_blank">
+            Advertise With Us
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://www.spectrum.com/policies/residential-terms.html" target="_blank">
+            TERMS
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://www.spectrum.com/policies/your-privacy-rights" target="_blank">
+            Your Privacy Rights
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://www.spectrum.com/policies/california" target="_blank">
+            California Consumer Privacy Rights
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://www.spectrum.com/policies/your-privacy-rights-opt-out" target="_blank">
+            California Consumer Limit the Use of My Sensitive Personal Information
+        </a>
+        
+    
+</li>
+
+    <li>
+    
+    
+        <a href="https://spectrum.com/policies/your-privacy-rights-opt-out" target="_blank">
+            Do Not Sell or Share My Personal Information/Opt-Out of Targeted Advertising
+        </a>
+        
+    
+</li>
+</ul>
+
+
+</div>
+                
+                    <div id="footerSocialLinks" class="social-icons">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/SpectrumNewsKC" class="icon--facebook-gray" data-provider="Facebook"></a>
+                            </li>
+                        
+                            <li>
+                                <a href="https://www.instagram.com/spectrumnewskc/" class="icon--instagram-gray" data-provider="Instagram"></a>
+                            </li>
+                        
+                            <li>
+                                <a href="https://x.com/SpectrumNewsKC" class="icon--twitter-gray" data-provider="Twitter"></a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+    <div class="legal-copy ">© 2024, Charter Communications, all rights reserved.</div>
+    </div>
+</footer>
+</div>
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+
+</div>
+
+    
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Import design specific JS -->
+<!-- Load empire JS library -->
+
+    
+<script src="/etc/clientlibs/news/vendor/bowser.min.ACSHASH66fb5ded26b5d86decaa5cc59ba79320.js"></script>
+<script src="/etc/designs/news/clientlibs/js/adobe-authentication.min.ACSHASH012838f4471994d84f1b5b2e6b8eebfb.js"></script>
+<script src="/etc/designs/news/clientlibs/js/pinxt-authentication.min.ACSHASH3bf6a057a371a71e653a3d9c286a2419.js"></script>
+<script src="/etc/designs/news/clientlibs/js.min.ACSHASH4fd44437fae09d460979ee80aa07fdea.js"></script>
+<script src="/etc/designs/news-empire/clientlibs/js.min.ACSHASHc1a67148e625f2ce57860271e23ab763.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Open in App Component -->
+
+    
+<script src="/etc/designs/news/clientlibs/js/article-app-prompt.min.ACSHASHce40a79fa9e435394e8ada2c37b9c036.js"></script>
+
+
+
+
+    
+<script src="/etc/designs/news/clientlibs/js/footer-year.min.ACSHASH3d09f78678547bd9e7d0c2c3f7c19348.js"></script>
+
+
+
+
+
+
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/clientlibs/news/vendor/spectrum-player.min.ACSHASH9b24daba557e982b944497a3fce529d4.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/designs/news/clientlibs/js/softwall.min.ACSHASH3dc70b96b21964f0651ff9bfe3f809ab.js"></script>
+<script src="/etc/designs/news/clientlibs/js/user-profile.min.ACSHASH5d76806dcbfaa30997f5cf9d64ecc399.js"></script>
+<script src="/etc/designs/news/clientlibs/js/video-controller.min.ACSHASH7db7f58a574d7c3db619151633ced39f.js"></script>
+<script src="/etc/designs/news/clientlibs/js/video-player.min.ACSHASH47259b67e4c3176d2fb0206380ad2f24.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/clientlibs/news/vendor/moment-2-30-1.min.ACSHASH1f81ff3169d92993071a96a255d4f97f.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/designs/news/clientlibs/js/mini-live-player.min.ACSHASHf85fa368911f756f51bdcfc88017253f.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/clientlibs/news/vendor/base64.min.ACSHASH1135bd8a2f0dfbe9b9230601da73a88b.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/clientlibs/news/vendor/jquery-cors.min.ACSHASH4054c272beb481b4b196f0a43054c06c.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/designs/news/clientlibs/js/weather/js.min.ACSHASH9e36e69643f55671168f689daf26c01b.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+<script src="/etc/designs/news/clientlibs/js/recent-activity.min.ACSHASH36bf137c2d0fb3b802823722135d5219.js"></script>
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+        
+
+        
+        
+            
+    
+
+
+
+        
+
+    
+
+        
+        
+            <script type="text/javascript">
+(function($) {
+    if (!isMobile.any) {
+        /* By default the panels should be only be expanded on a desktop */
+        $('footer .panel-collapse.collapse').addClass('in');
+        /* Remove collapse functionality on desktop */
+        $('footer .panel-title').removeAttr('data-toggle');
+    }
+    if (isMobile.any) {
+        /* Only display the + sign on a mobile device */
+        $('footer .expand-control').removeClass('hidden');
+        /* BUGFIX: Include an empty onclick function on footer accordions to fix an iOS device bug with bootstrap collapse.
+        Sometimes iOS does not seem to treat divs as clickable elements, but adding a blank on-click handler allows
+        the rest of bootstrap collapse to function without side effects. */
+        $('footer .panel-title').on('click', function(){})
+    }
+})(jQuery);
+</script>
+        
+
+        
+
+        
+        
+
+        
+        
+
+    
+
+
+
+
+
+
+
+<script>
+    /**
+     * sets the  quantum visitId in the 'digitalData'
+     * layer at: window.digitalData.visit.visitId
+     *
+     **/
+    var timeit = window.setInterval(setVisitId, 2000);
+
+    function setVisitId() {
+        if (window && window.Helix && window.Helix.track) {
+            window.digitalData.visit.visitId = window.Helix.get("visitId");
+        }
+        if (window.digitalData.visit.visitId && typeof window.digitalData.visit.visitId !== 'undefined') {
+            clearInterval(timeit);
+        }
+    }
+</script>
+
+
+
+
+<script type="text/javascript">
+    window.addEventListener("load", function (e) {
+        var auth = localStorage.getItem('authenticated')
+        var docClicked = Cookies.get('clicked-resumed')
+        if ((auth && auth === "true") && (!docClicked)) {
+            News.App.QuantumAnalytics.checkQuantumLoginResume();
+        } else if ((auth && auth === "true") && docClicked) {
+            Cookies.remove('clicked-resumed')
+        }
+    });
+
+    $(document).ready(function () {
+        $(document).on('click', function (e) {
+            var auth = localStorage.getItem('authenticated')
+            if (auth && auth === "true") {
+                News.App.QuantumAnalytics.cookieGeneral("clicked-resumed");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civic-ledger-actions"
+version = "0.1.0"
+description = "Local-first actions server for Civic Ledger proof-based civic controls"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.24",
+  "pydantic>=2.5",
+  "python-multipart>=0.0.9",
+  "orjson>=3.9",
+]
+
+[project.scripts]
+civic-ledger-api = "civic_ledger_actions.main:cli"
+civic-ledger-build-index = "civic_ledger_actions.indexer:cli"

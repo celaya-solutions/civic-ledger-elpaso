@@ -1,0 +1,3 @@
+[console_scripts]
+civic-ledger-api = civic_ledger_actions.main:cli
+civic-ledger-build-index = civic_ledger_actions.indexer:cli
