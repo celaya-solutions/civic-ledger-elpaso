@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-# Copy dependencies first for layer caching
+# Copy dependencies
 COPY pyproject.toml requirements.txt ./
 RUN python -m venv /app/.venv && \
     /app/.venv/bin/pip install --no-cache-dir -r requirements.txt fastapi[standard] uvicorn pymupdf
@@ -19,18 +19,11 @@ WORKDIR /app
 # Copy virtual environment from builder
 COPY --from=builder /app/.venv /app/.venv
 
-# Copy application code (main files)
-COPY server.py ./
-COPY document_loader.py citation_validator.py template_generator.py feasibility_checker.py ./
+# Copy ONLY essential files for the server to run
+COPY server.py document_loader.py citation_validator.py template_generator.py feasibility_checker.py ./
 
-# ✅ CRITICAL: Copy docs directory explicitly
+# ✅ CRITICAL: Copy docs directory for citations
 COPY docs ./docs
-
-# Copy CustomGPT config if exists
-COPY civic-ledger-gpt ./civic-ledger-gpt 2>/dev/null || true
-
-# Copy any other necessary Python modules
-COPY src ./src 2>/dev/null || true
 
 EXPOSE 8000
 
