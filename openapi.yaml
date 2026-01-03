@@ -1,0 +1,481 @@
+openapi: 3.1.0
+info:
+  title: Civic Ledger MCP Actions API
+  version: 1.0.0
+  description: >
+    Provides document search, citation validation, and policy generation for El Paso civic accountability. Safety
+    boundaries: no unauthorized access, no device-level meter access, no PII harvesting, no harassment.
+servers:
+  - url: https://civic-ledger-elpaso.fly.dev
+    description: Production
+tags:
+  - name: Legal Authority
+  - name: Citations
+  - name: Precedents
+  - name: Records Requests
+  - name: Feasibility
+  - name: Policy Packets
+  - name: Board Minutes
+  - name: Cost Benefit
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        detail:
+          type: string
+      required:
+        - error
+    TextResult:
+      type: object
+      properties:
+        result:
+          type: string
+          description: Tool output as plain text (may include citations, page refs, and flags like GREEN/YELLOW/RED).
+      required:
+        - result
+    SearchLegalAuthorityInput:
+      type: object
+      properties:
+        jurisdiction:
+          type: string
+          description: texas or new_mexico
+          enum:
+            - texas
+            - new_mexico
+        topic:
+          type: string
+          description: development_agreements, utility_regulation, or open_records
+          enum:
+            - development_agreements
+            - utility_regulation
+            - open_records
+        query:
+          type: string
+          description: Natural language query about legal authority
+      required:
+        - jurisdiction
+        - topic
+        - query
+    ValidateCitationInput:
+      type: object
+      properties:
+        document:
+          type: string
+          description: Document filename under docs/
+        page:
+          description: Page number (1-based) or null for full scan
+          oneOf:
+            - type: integer
+            - type: "null"
+        section:
+          description: Optional section identifier
+          oneOf:
+            - type: string
+            - type: "null"
+        claimed_text:
+          type: string
+          description: Text that was cited
+      required:
+        - document
+        - claimed_text
+    LoadPrecedentInput:
+      type: object
+      properties:
+        jurisdiction:
+          type: string
+          description: loudoun_county, mesa, or raleigh_durham
+          enum:
+            - loudoun_county
+            - mesa
+            - raleigh_durham
+        document_type:
+          type: string
+          description: development_agreement, water_contract, or rate_structure
+          enum:
+            - development_agreement
+            - water_contract
+            - rate_structure
+        topic:
+          type: string
+          description: infrastructure_escrow, cost_allocation, or transparency
+          enum:
+            - infrastructure_escrow
+            - cost_allocation
+            - transparency
+      required:
+        - jurisdiction
+        - document_type
+        - topic
+    GenerateRecordsRequestInput:
+      type: object
+      properties:
+        jurisdiction:
+          type: string
+          description: city_of_elpaso, epwater, or dona_ana_county
+          enum:
+            - city_of_elpaso
+            - epwater
+            - dona_ana_county
+        document_type:
+          type: string
+          description: board_minutes, development_agreement, or cost_study
+          enum:
+            - board_minutes
+            - development_agreement
+            - cost_study
+        date_range:
+          type: string
+          description: Date range in format 'YYYY-MM-DD to YYYY-MM-DD'
+          pattern: ^\d{4}-\d{2}-\d{2}\s+to\s+\d{4}-\d{2}-\d{2}$
+        specific_topic:
+          type: string
+          description: Specific topic to request
+      required:
+        - jurisdiction
+        - document_type
+        - date_range
+        - specific_topic
+    CheckFeasibilityInput:
+      type: object
+      properties:
+        proposed_control:
+          type: string
+          description: Description of proposed control/requirement
+        jurisdiction:
+          type: string
+          description: elpaso or santa_teresa
+          enum:
+            - elpaso
+            - santa_teresa
+        utility_type:
+          type: string
+          description: water, electric, or gas
+          enum:
+            - water
+            - electric
+            - gas
+      required:
+        - proposed_control
+        - jurisdiction
+        - utility_type
+    AssemblePolicyPacketInput:
+      type: object
+      properties:
+        packet_type:
+          type: string
+          description: council_presentation, commission_resolution, or rfp_package
+          enum:
+            - council_presentation
+            - commission_resolution
+            - rfp_package
+        components:
+          type: array
+          description: List of components to include
+          items:
+            type: string
+        jurisdiction:
+          type: string
+          description: city_of_elpaso or dona_ana_county
+          enum:
+            - city_of_elpaso
+            - dona_ana_county
+      required:
+        - packet_type
+        - components
+        - jurisdiction
+    ExtractBoardMinutesInput:
+      type: object
+      properties:
+        document:
+          type: string
+          description: Document filename in docs/
+        search_terms:
+          type: array
+          description: Terms to search for
+          items:
+            type: string
+        date_range:
+          type: string
+          description: Date range in format 'YYYY-MM-DD to YYYY-MM-DD'
+          pattern: ^\d{4}-\d{2}-\d{2}\s+to\s+\d{4}-\d{2}-\d{2}$
+      required:
+        - document
+        - search_terms
+        - date_range
+    CostBenefitInput:
+      type: object
+      properties:
+        control_type:
+          type: string
+          description: cost_of_service_study, dashboard_development, or independent_audit
+          enum:
+            - cost_of_service_study
+            - dashboard_development
+            - independent_audit
+        scope:
+          type: string
+          description: single_facility, all_data_centers, or system_wide
+          enum:
+            - single_facility
+            - all_data_centers
+            - system_wide
+        jurisdiction:
+          type: string
+          description: elpaso
+          enum:
+            - elpaso
+      required:
+        - control_type
+        - scope
+        - jurisdiction
+security:
+  - ApiKeyAuth: []
+paths:
+  /legal/search:
+    post:
+      tags:
+        - Legal Authority
+      operationId: search_legal_authority
+      summary: Search TX/NM statutes for municipal powers and authorities
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SearchLegalAuthorityInput"
+            examples:
+              tx_dev_agreement:
+                value:
+                  jurisdiction: texas
+                  topic: development_agreements
+                  query: What authority allows El Paso to require performance terms in a development agreement?
+      responses:
+        "200":
+          description: Search results with citations/quotes where available
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /citations/validate:
+    post:
+      tags:
+        - Citations
+      operationId: validate_citation
+      summary: Verify a cited document exists and contains the claimed text
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValidateCitationInput"
+            examples:
+              validate_example:
+                value:
+                  document: EPWater_Board_Minutes_2024-03-15.pdf
+                  page: 12
+                  section: "4.2"
+                  claimed_text: The Board approved...
+      responses:
+        "200":
+          description: Validation result (match status + where found, as text)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+        "404":
+          description: Document not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /precedents/load:
+    post:
+      tags:
+        - Precedents
+      operationId: load_comparable_precedent
+      summary: Retrieve precedent agreement language from comparable jurisdictions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoadPrecedentInput"
+            examples:
+              escrow_example:
+                value:
+                  jurisdiction: loudoun_county
+                  document_type: development_agreement
+                  topic: infrastructure_escrow
+      responses:
+        "200":
+          description: Precedent text snippets and references, as text
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+  /records-request/generate:
+    post:
+      tags:
+        - Records Requests
+      operationId: generate_records_request
+      summary: Generate TX PIA / NM IPRA records request template
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GenerateRecordsRequestInput"
+            examples:
+              pia_example:
+                value:
+                  jurisdiction: epwater
+                  document_type: cost_study
+                  date_range: 2024-01-01 to 2024-12-31
+                  specific_topic: Cost-of-service assumptions for large industrial customers
+      responses:
+        "200":
+          description: Draft request letter/email as text
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+  /feasibility/check:
+    post:
+      tags:
+        - Feasibility
+      operationId: check_feasibility
+      summary: Check operational feasibility of a proposed control (heuristic)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CheckFeasibilityInput"
+            examples:
+              feasibility_example:
+                value:
+                  proposed_control: Weekly aggregated export of facility water usage into a public dashboard
+                  jurisdiction: elpaso
+                  utility_type: water
+      responses:
+        "200":
+          description: Feasibility assessment with constraints and safer alternatives
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+  /policy-packet/assemble:
+    post:
+      tags:
+        - Policy Packets
+      operationId: assemble_policy_packet
+      summary: Assemble a sign-ready packet from templates
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssemblePolicyPacketInput"
+            examples:
+              packet_example:
+                value:
+                  packet_type: council_presentation
+                  components:
+                    - one_page_checklist
+                    - resident_explainer
+                    - official_faq
+                  jurisdiction: city_of_elpaso
+      responses:
+        "200":
+          description: Packet content as text (or links if your wrapper returns files)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+  /board-minutes/extract:
+    post:
+      tags:
+        - Board Minutes
+      operationId: extract_board_minutes
+      summary: Parse board-minutes PDFs for terms and date range
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ExtractBoardMinutesInput"
+            examples:
+              minutes_example:
+                value:
+                  document: EPWater_Board_Minutes_2024.pdf
+                  search_terms:
+                    - data center
+                    - large customer
+                    - rate
+                    - cost-of-service
+                  date_range: 2024-01-01 to 2024-12-31
+      responses:
+        "200":
+          description: Extracted snippets with page refs, as text
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+  /cost-benefit/calculate:
+    post:
+      tags:
+        - Cost Benefit
+      operationId: cost_benefit_calculator
+      summary: Heuristic ROI / fiscal impact calculator for proposed controls
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CostBenefitInput"
+            examples:
+              roi_example:
+                value:
+                  control_type: independent_audit
+                  scope: system_wide
+                  jurisdiction: elpaso
+      responses:
+        "200":
+          description: Cost/benefit estimate, assumptions, and sensitivity notes, as text
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TextResult"
+  /health:
+    get:
+      tags:
+        - Feasibility
+      operationId: health_check
+      summary: Health check
+      security: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                required:
+                  - ok
