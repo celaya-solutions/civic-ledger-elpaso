@@ -37,9 +37,9 @@ logger = logging.getLogger("civic-ledger-mcp")
 app = FastAPI(title="Civic Ledger MCP API", version="1.0")
 
 # Initialize tool components
-docs_path = "./docs"
+from pathlib import Path
+docs_path = Path("./docs")
 validator = CitationValidator(docs_path)
-loader = DocumentLoader(docs_path)
 feasibility = FeasibilityChecker()
 templates = TemplateGenerator()
 
